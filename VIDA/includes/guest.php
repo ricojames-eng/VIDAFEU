@@ -94,7 +94,7 @@ class Guest{
 	  // sanitize the values before submitting
 	  // Note: does not alter the actual value of each attribute
 	  foreach($this->attributes() as $key => $value){
-	    $clean_attributes[$key] = $mydb-> mysqli_real_escape_string($value);
+	    $clean_attributes[$key] = $mydb->real_escape_string($value);
 	  }
 	  return $clean_attributes;
 	}
