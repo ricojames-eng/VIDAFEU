@@ -1,5 +1,5 @@
 <?php
-//require_once(LIB_PATH.DS."config.php");
+require_once(LIB_PATH.DS."config.php");
 class Database {
 	var $sql_string = '';
 	var $error_no = 0;
@@ -18,14 +18,14 @@ class Database {
 	public function open_connection() {
 
 
-		$this->conn = mysqli_connect('remotemysql.com','pNKzi39B6c','Pen6jnsdwF','pNKzi39B6c'); // if you connect it to online database use this 'vidafeu.database.windows.net','vidafeu','Vidainternational123','VIDAFEU'
+		$this->conn = mysqli_connect(DB_SERVER,DB_USER,DB_PASS); // if you connect it to online database use this 'vidafeu.database.windows.net','vidafeu','Vidainternational123','VIDAFEU'
 		if(!$this->conn){
 			echo "Problem in database connection! Contact administrator!";
 			exit();
 		 
 		}else{
 
-			$db_select = mysqli_select_db($this->conn,'pNKzi39B6c'); // 'VIDAFEU'
+			$db_select = mysqli_select_db($this->conn,DB_NAME); // 'VIDAFEU'
 			if (!$db_select) {
 				echo "Problem in selecting database! Contact administrator!";
 				exit();
