@@ -138,6 +138,27 @@ $_SESSION['GUESTID'] =   $lastguest;
       $sql = "INSERT INTO tblreservation (CONFIRMATIONCODE, TRANSDATE, ROOMID, ARRIVAL, DEPARTURE, RPRICE, GUESTID, PRORPOSE, STATUS, BOOKDATE, REMARKS, USERID) VALUES ('$CONFIRM','$A','$B','$C','$D','$E','$F','$G','$H','$A','NONE','$GUESTNUM')";
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
+
+         @$A = '0';
+   @$B = $_POST['name']; 
+   @$C = $_POST['last'];
+   @$D = $_POST['city'];
+   @$F = $_POST['address'];
+   @$G = $_POST['dbirth'];
+   @$H = $_POST['phone'];
+   @$I = $_POST['nationality'];
+   @$J = $_POST['company'];
+   @$K = $_POST['caddress'];
+   @$L = '1';
+   @$M = $_POST['cemail'];
+   @$N = $_POST['username'];
+   @$O = $_POST['pass'];
+   @$P = $_POST['zip'];
+   @$Q = '';
+
+    $sql = "INSERT INTO tblguest (REFNO, G_FNAME, G_LNAME, G_CITY, G_ADDRESS, DBIRTH, G_PHONE, G_NATIONALITY, G_COMPANY, G_CADDRESS, G_TERMS, G_EMAIL, G_UNAME, G_PASS, ZIP, LOCATION) VALUES ('$A','$B','$C','$D','$E','$F','$G','$H','$I','$J','$K','$L','$M','$N','$O','$P','$Q')";
+      $mydb->setQuery($sql);
+      $mydb->executeQuery(); 
     }
 
       $sql = "UPDATE `tblauto` SET `start` = `start` + 1 WHERE `autoid`=1";
