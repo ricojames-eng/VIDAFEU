@@ -135,7 +135,7 @@ class Guest{
 		foreach($attributes as $key => $value) {
 		  $attribute_pairs[] = "{$key}='{$value}'";
 		}
-		$sql = "UPDATE ".self::$tbl_name." SET ";
+		$sql = "UPDATE tblguest SET ";
 		$sql .= join(", ", $attribute_pairs);
 		$sql .= " WHERE GUESTID=". $id;
 	  $mydb->setQuery($sql);
