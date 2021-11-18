@@ -6,7 +6,7 @@ class Database {
 	var $error_msg = '';
 	private $conn;
 	public $last_query;
-	private $magic_quotes_active;
+	//private $magic_quotes_active;
 	private $real_escape_string_exists;
 	
 	function __construct() {
@@ -110,10 +110,11 @@ class Database {
 	
 	 public function escape_value( $value ) {
 
-
+		if( $this->real_escape_string_exists ) { // PHP v4.3.0 or higher
+			// undo any magic quote effects so mysql_real_escape_string can do the work		
 			$value = mysqli_real_escape_string($this->conn,$value);
-
-	
+		}
+		return $value;
    	}
 	
 	public function close_connection() {
