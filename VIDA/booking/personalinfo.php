@@ -1,5 +1,6 @@
 <?php
-require_once("/app/includes/initialize.php"); 
+require_once("/app/includes/initialize.php");
+ 
 if (isset($_POST['submit'])){
   @$arival   = $_SESSION['from']; 
   @$departure = $_SESSION['to'];

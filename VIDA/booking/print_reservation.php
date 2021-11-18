@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php require_once("../includes/initialize.php"); ?>
+<?php require_once("/app/includes/initialize.php"); ?>
 <html>
 <head>
   <meta charset="utf-8">
