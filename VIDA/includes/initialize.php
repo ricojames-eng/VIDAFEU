@@ -1,7 +1,7 @@
 <?php
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 defined('SITE_ROOT') ? null : define ('SITE_ROOT', $_SERVER['DOCUMENT_ROOT'].DS.'VIDA');
-defined('LIB_PATH') ? null : define ('/app/includes');
+defined('LIB_PATH') ? null : define ('LIB_PATH','/app/includes');
 
 // load config file first 
 require_once("/app/includes/config.php");
