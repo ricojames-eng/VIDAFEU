@@ -4,7 +4,7 @@ defined('SITE_ROOT') ? null : define ('SITE_ROOT', $_SERVER['DOCUMENT_ROOT'].DS.
 defined('LIB_PATH') ? null : define ('LIB_PATH',SITE_ROOT.DS.'includes');
 
 // load config file first 
-require_once("/app/VIDA/includes/config.php");
+//require_once("/app/VIDA/includes/config.php");
 //load basic functions next so that everything after can use them
 require_once("/app/VIDA/includes/functions.php");
 //later here where we are going to put our class session
