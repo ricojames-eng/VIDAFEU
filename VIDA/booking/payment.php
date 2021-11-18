@@ -154,9 +154,9 @@ $_SESSION['GUESTID'] =   $lastguest;
    @$N = $_POST['username'];
    @$O = $_POST['pass'];
    @$P = $_POST['zip'];
-   @$Q = '';
+   @$Q = '0';
 
-    $sql = "INSERT INTO tblguest (REFNO, G_FNAME, G_LNAME, G_CITY, G_ADDRESS, DBIRTH, G_PHONE, G_NATIONALITY, G_COMPANY, G_CADDRESS, G_TERMS, G_EMAIL, G_UNAME, G_PASS, ZIP, LOCATION) VALUES ('$A','$B','$C','$D','$E','$F','$G','$H','$I','$J','$K','$L','$M','$N','$O','$P','$Q')";
+      $sql = "INSERT INTO tblguest (REFNO, G_FNAME, G_LNAME, G_CITY, G_ADDRESS, DBIRTH, G_PHONE, G_NATIONALITY, G_COMPANY, G_CADDRESS, G_TERMS, G_EMAIL, G_UNAME, G_PASS, ZIP, LOCATION) VALUES ('$A','$B','$C','$D','$E','$F','$G','$H','$I','$J','$K','$L','$M','$N','$O','$P','$Q')";
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
     }
