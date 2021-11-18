@@ -50,7 +50,7 @@ $guest = New Guest();
 $guest->GUESTID          = $res->start;
 $guest->G_FNAME          = $_SESSION['name'];    
 $guest->G_LNAME          = $_SESSION['last'];  
-$guest->G_CITY           = $_SESSION['City'];
+$guest->G_CITY           = $_SESSION['city'];
 $guest->G_ADDRESS        = $_SESSION['address'] ;        
 $guest->DBIRTH           = date_format(date_create($_SESSION['dbirth']), 'Y-m-d');   
 $guest->G_PHONE          = $_SESSION['phone'];    
@@ -319,7 +319,7 @@ for ($i=0; $i < $count_cart  ; $i++) {
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"description":"VIDA INTERNATIONAL HOTEL AND RESORT, ROOM RENTAL. TRANSACTION ID: <?php echo $_SESSION['confirmation']; ?>.","amount":{"currency_code":"PHP","value":<?php echo   $_SESSION['pay'] ;?>}}]
+            purchase_units: [{"description":"VIDA INTERNATIONAL HOTEL AND RESORT, ROOM RENTAL. TRANSACTION ID: <?php echo $_SESSION['confirmation']; ?>.","amount":{"currency_code":"PHP","value":<?php echo $payable ;?>}}]
           });
         },
 
