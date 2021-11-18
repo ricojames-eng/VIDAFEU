@@ -94,7 +94,7 @@ class Guest{
 	  // sanitize the values before submitting
 	  // Note: does not alter the actual value of each attribute
 	  foreach($this->attributes() as $key => $value){
-	    $clean_attributes[$key] = $mydb->$value;
+	    $clean_attributes[$key] = $mydb->escape_value($value);
 	  }
 	  return $clean_attributes;
 	}
@@ -135,9 +135,9 @@ class Guest{
 		foreach($attributes as $key => $value) {
 		  $attribute_pairs[] = "{$key}='{$value}'";
 		}
-		$sql = "UPDATE tblguest SET ";
-		$sql .= join(", ", $attribute_pairs);
-		$sql .= " WHERE GUESTID=". $id;
+
+		$sql = "UPDATE tblguest SET G_FNAME='$G_FNAME' WHERE GUESTID='$GUESTID'";
+
 	  $mydb->setQuery($sql);
 	 	if(!$mydb->executeQuery()) return false; 	
 		
