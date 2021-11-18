@@ -188,7 +188,8 @@ $_SESSION['GUESTID'] =   $lastguest;
         </div>
         <div class="col-md-12">
           <label>Address:</label>
-          <?php echo isset($_SESSION['city']) ? $_SESSION['city']: ' '. ' ' . isset($_SESSION['address'])  ? $_SESSION['address'] : ' '; ?> 
+          <?php echo isset(($_SESSION['city']) ? $_SESSION['city']: ' '). isset($_SESSION['address'])  : $_SESSION['address']; ?> 
+                                  
         </div>
         <div class="col-md-12"> 
         <label>Phone #:</label>
