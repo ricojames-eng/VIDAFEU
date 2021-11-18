@@ -18,7 +18,7 @@ class Database {
 	public function open_connection() {
 
 
-		$this->conn = mysqli_connect(DB_SERVER,DB_USER,DB_PASS); // if you connect it to online database use this 'vidafeu.database.windows.net','vidafeu','Vidainternational123','VIDAFEU'
+		$this->conn = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME); // if you connect it to online database use this 'vidafeu.database.windows.net','vidafeu','Vidainternational123','VIDAFEU'
 		if(!$this->conn){
 			echo "Problem in database connection! Contact administrator!";
 			exit();
