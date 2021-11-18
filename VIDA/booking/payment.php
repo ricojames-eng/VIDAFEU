@@ -94,13 +94,21 @@ $_SESSION['GUESTID'] =   $lastguest;
             @$tot += $_SESSION['feuhotel_cart'][$i]['feuhotelroomprice'];
             @$CONFIRM = $_SESSION['confirmation'];
             @$ROOMN = $_SESSION['feuhotel_cart'][$i]['feuhotelroomid'];
-
             @$ROOMNAME = $_SESSION['ROOM'];
-
             @$GUESTN = $_SESSION['name'];
             @$STARTD = date_format(date_create( $_SESSION['feuhotel_cart'][$i]['feuhotelcheckin']), 'Y-m-d');
             @$ENDD =date_format(date_create( $_SESSION['feuhotel_cart'][$i]['feuhotelcheckout']), 'Y-m-d'); 
             @$GUESTNUM = $_SESSION['GUESTID'];
+
+
+            @$A = date('Y-m-d h:i:s');
+            @$B = $_SESSION['feuhotel_cart'][$i]['feuhotelroomid'];
+            @$C = date_format(date_create( $_SESSION['feuhotel_cart'][$i]['feuhotelcheckin']), 'Y-m-d');  
+            @$D = date_format(date_create( $_SESSION['feuhotel_cart'][$i]['feuhotelcheckout']), 'Y-m-d'); 
+            @$E = $_SESSION['feuhotel_cart'][$i]['feuhotelroomprice'];  
+            @$F = $_SESSION['GUESTID']; 
+            @$G = 'Rental';
+            @$H = 'Pending';
             }
 
            $item = count($_SESSION['feuhotel_cart']);
@@ -124,6 +132,10 @@ $_SESSION['GUESTID'] =   $lastguest;
      
 
       $sql = "INSERT INTO tblinventory (inv_name, inv_desc, inv_guestname, inv_startdate, inv_guest_end_date, inv_rate, inv_guestpaid, inv_guest_to_pay, inv_bal, inv_guest_room, User_user_id) VALUES ('ROOM RENTAL','$ROOMDES','$GUESTN','$STARTD','$ENDD','$tot','0','$tot','$tot','$ROOMNAME','$GUESTNUM')";
+      $mydb->setQuery($sql);
+      $mydb->executeQuery(); 
+
+      $sql = "INSERT INTO tblreservation (CONFIRMATIONCODE, TRANSDATE, ROOMID, ARRIVAL, DEPARTURE, RPRICE, GUESTID, PRORPOSE, STATUS, BOOKDATE, REMARKS, USERID) VALUES ('$CONFIRM','$A','$B','$C','$D','$E','$F','$G','$H','$A','NONE','$GUESTNUM')";
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
     }
