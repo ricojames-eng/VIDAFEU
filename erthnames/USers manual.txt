@@ -1,0 +1,23 @@
+Open Xammp
+start apache and mySQL.
+Put the Database dh_ahs.
+
+Open chrome type: localhost/erthnames
+select php-->login.php
+Default username and password:
+User:user
+password:user
+The user account.
+The user can click the details then add to cart the items.
+
+after adding to cart you can click manage cart to send your order.
+you can also remove order.
+
+Default username and password:
+User:admin
+password:admin
+
+The admin account can view the orders.
+the admin can see the name of the buyer the item name the contact number and the price.
+
+the admin can update the price in items tab.
