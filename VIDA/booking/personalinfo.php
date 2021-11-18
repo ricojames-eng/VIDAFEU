@@ -20,6 +20,7 @@ if (isset($_POST['submit'])){
 	 @$_SESSION['username']		= $_POST['username'];
 	 @$_SESSION['pass']  		= $_POST['pass'];
 	 @$_SESSION['pending']  		= 'pending';
+
   
 redirect('index.php?view=payment');
 }
