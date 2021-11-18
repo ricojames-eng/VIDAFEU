@@ -8,8 +8,8 @@ defined('DB_NAME') ? null : define("DB_NAME","VIDAFEU"); //define our database N
 $thisFile = str_replace('\\', '/', __FILE__);
 $docRoot =$_SERVER['DOCUMENT_ROOT'];
 
-$webRoot  = str_replace(array($docRoot, 'includes/config.php'), '', $thisFile);
-$srvRoot  = str_replace('config/config.php','', $thisFile);
+$webRoot  = str_replace(array($docRoot, '/app/VIDA/includes/config.php'), '', $thisFile);
+$srvRoot  = str_replace('/app/VIDA/includes/config.php','', $thisFile);
 
 define('WEB_ROOT', $webRoot);
 define('SRV_ROOT', $srvRoot);
