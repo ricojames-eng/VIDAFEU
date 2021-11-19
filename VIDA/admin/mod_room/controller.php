@@ -54,7 +54,21 @@ function doInsert(){
 						}
 				}
 					 
-	
+				$room->ROOMNUM 		=	$_POST['ROOMNUM'];
+				$room->ROOM 		=	$_POST['ROOM'];
+				$room->ACCOMID 		=	$_POST['ACCOMID'];
+				$room->ROOMDESC 	=	$_POST['ROOMDESC'];
+				$room->NUMPERSON 	=	$_POST['NUMPERSON'];
+				$room->PRICE 		=	$_POST['PRICE'];
+ 				$room->ROOMIMAGE    = $location;
+ 				$room->OROOMNUM 	=	$_POST['ROOMNUM'];
+ 				$room->RateType		=	$_POST['RATETYPE'];
+ 				$room->SeasonName	=	$_POST['SEASONNAME'];
+ 				$room->Amenities	=	$_POST['AMMENITIES'];
+				$room->RateXtraAdult	=	$_POST['RATEXTRAADULT'];
+				$room->RateXtraKid	=	$_POST['RATEXTRAKID'];
+
+					 $istrue = 1;
 
 					 if ($istrue == 1){
 					 	message("New [". $_POST['ROOM'] ."] created successfully!", "success");
