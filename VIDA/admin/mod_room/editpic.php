@@ -1,5 +1,5 @@
 <?php  
-require_once ("../../includes/initialize.php");  
+require_once ("/app/includes/initialize.php");  
 
 $room = New Room();
 $cur = $room->single_room($_POST['ROOMID']);
