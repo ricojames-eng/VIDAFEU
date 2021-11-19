@@ -19,8 +19,8 @@ if (isset($_POST['submit'])){
          @$N = $_POST['pass'];
          @$O = $_POST['zip'];
 
-      global $mydb;
-      $sql = "INSERT INTO `tblguest`(`REFNO`, `G_FNAME`, `G_LNAME`, `G_CITY`, `G_ADDRESS`, `DBIRTH`, `G_PHONE`, `G_NATIONALITY`, `G_COMPANY`, `G_CADDRESS`, `G_TERMS`, `G_EMAIL`, `G_UNAME`, `G_PASS`, `ZIP`) VALUES (0,'$B','$C','$D','$E','$F','$G','$H','$I','$J',1,'$L','$M','$N','$O')";
+      
+      $sql = "INSERT INTO `tblguest`(`REFNO`, `G_FNAME`, `G_LNAME`, `G_CITY`, `G_ADDRESS`, `DBIRTH`, `G_PHONE`, `G_NATIONALITY`, `G_COMPANY`, `G_CADDRESS`, `G_TERMS`, `G_EMAIL`, `G_UNAME`, `G_PASS`, `ZIP`) VALUES ('0','$B','$C','$D','$E','$F','$G','$H','$I','$J','1','$L','$M','$N','$O')";
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
 
