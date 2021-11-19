@@ -1,6 +1,6 @@
 <?php
 
-require_once(LIB_PATH.DS.'database.php');
+require_once("/app/includes/database.php");
 class Accomodation{
 	
 	protected static $tbl_name = "tblaccomodation";

@@ -2,26 +2,8 @@
 require_once("/app/includes/initialize.php");
 
 if (isset($_POST['submit'])){
-  @$arival   = $_SESSION['from']; 
-  @$departure = $_SESSION['to'];
-  @$ROOMID = $_SESSION['ROOMID'];
 
-	 @$_SESSION['name']   		= $_POST['name'];
-	 @$_SESSION['last']   		= $_POST['last'];
-	 @$_SESSION['dbirth']   		= $_POST['dbirth'];
-	 @$_SESSION['nationality']   = $_POST['nationality'];
-	 @$_SESSION['city']   		= $_POST['city'];
-	 @$_SESSION['address'] 		= $_POST['address'];
-	 @$_SESSION['company']  		= $_POST['company'];
-	 @$_SESSION['caddress']  	= $_POST['caddress'];
-	 @$_SESSION['zip']   		= $_POST['zip'];
-	 @$_SESSION['phone']   		= $_POST['phone'];
-	 @$_SESSION['cemail']		= $_POST['cemail'];
-	 @$_SESSION['username']		= $_POST['username'];
-	 @$_SESSION['pass']  		= $_POST['pass'];
-	 @$_SESSION['pending']  		= 'pending';
-
-         @$A = 0;
+	  @$A = 0;
          @$B = $_POST['name']; 
          @$C = $_POST['last'];
          @$D = $_POST['city'];
@@ -41,6 +23,26 @@ if (isset($_POST['submit'])){
       $sql = "INSERT INTO tblguest (REFNO, G_FNAME, G_LNAME, G_CITY, G_ADDRESS, DBIRTH, G_PHONE, G_NATIONALITY, G_COMPANY, G_CADDRESS, G_TERMS, G_EMAIL, G_UNAME, G_PASS, ZIP) VALUES ('$A','$B','$C','$D','$E','$F','$G','$H','$I','$J','$K','$L','$M','$N','$O')";
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
+
+
+  @$arival   = $_SESSION['from']; 
+  @$departure = $_SESSION['to'];
+  @$ROOMID = $_SESSION['ROOMID'];
+
+	 @$_SESSION['name']   		= $_POST['name'];
+	 @$_SESSION['last']   		= $_POST['last'];
+	 @$_SESSION['dbirth']   		= $_POST['dbirth'];
+	 @$_SESSION['nationality']   = $_POST['nationality'];
+	 @$_SESSION['city']   		= $_POST['city'];
+	 @$_SESSION['address'] 		= $_POST['address'];
+	 @$_SESSION['company']  		= $_POST['company'];
+	 @$_SESSION['caddress']  	= $_POST['caddress'];
+	 @$_SESSION['zip']   		= $_POST['zip'];
+	 @$_SESSION['phone']   		= $_POST['phone'];
+	 @$_SESSION['cemail']		= $_POST['cemail'];
+	 @$_SESSION['username']		= $_POST['username'];
+	 @$_SESSION['pass']  		= $_POST['pass'];
+	 @$_SESSION['pending']  		= 'pending';
 
       $sql = "UPDATE `tblauto` SET `start` = `start` + 1 WHERE `autoid`=1";
       $mydb->setQuery($sql);
