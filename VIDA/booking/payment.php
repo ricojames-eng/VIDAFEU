@@ -69,30 +69,6 @@ $guest->create();
    
 $_SESSION['GUESTID'] =   $lastguest;
 
-
-         @$A = $res->start;
-         @$B = '0'; 
-         @$C = $_SESSION['name']; 
-         @$D = $_SESSION['last'];
-         @$E = $_SESSION['city'];
-         @$F = $_SESSION['address']; 
-         @$G = date_format(date_create($_SESSION['dbirth']), 'Y-m-d');
-         @$H = $_SESSION['phone'];
-         @$I = $_SESSION['nationality'];
-         @$J = $_SESSION['company'];
-         @$K = $_SESSION['caddress'];
-         @$L = 1;
-         @$M = $_SESSION['cemail']; 
-         @$N = $_SESSION['username'];
-         @$O = sha1($_SESSION['pass']);
-         @$P = $_SESSION['zip'];
-
-
-      global $mydb;
-      $sql = "INSERT INTO tblguest (GUESTID, REFNO, G_FNAME, G_LNAME, G_CITY, G_ADDRESS, DBIRTH, G_PHONE, G_NATIONALITY, G_COMPANY, G_CADDRESS, G_TERMS, G_EMAIL, G_UNAME, G_PASS, ZIP) VALUES ('$A','$B','$C','$D','$E','$F','$G','$H','$I','$J','$K','$L','$M','$N','$O','$P')";
-      $mydb->setQuery($sql);
-      $mydb->executeQuery(); 
-
 }
  
     $count_cart = count($_SESSION['feuhotel_cart']);
