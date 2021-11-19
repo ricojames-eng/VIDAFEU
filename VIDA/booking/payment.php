@@ -97,7 +97,7 @@ $_SESSION['GUESTID'] =   $lastguest;
             @$ROOMNAME = $_SESSION['ROOM'];
             @$GUESTN = $_SESSION['name'];
             @$STARTD = date_format(date_create( $_SESSION['feuhotel_cart'][$i]['feuhotelcheckin']), 'Y-m-d');
-            @$ENDD =date_format(date_create( $_SESSION['feuhotel_cart'][$i]['feuhotelcheckout']), 'Y-m-d'); 
+            @$ENDD = date_format(date_create( $_SESSION['feuhotel_cart'][$i]['feuhotelcheckout']), 'Y-m-d'); 
             @$GUESTNUM = $_SESSION['GUESTID'];
 
 
@@ -130,8 +130,7 @@ $_SESSION['GUESTID'] =   $lastguest;
       $ROOMNAME=$cur->ROOM;
       $ROOMDES =$cur->ROOMDESC;
      
-
-      $sql = "INSERT INTO tblinventory (inv_name, inv_desc, inv_guestname, inv_startdate, inv_guest_end_date, inv_rate, inv_guestpaid, inv_guest_to_pay, inv_bal, inv_guest_room, User_user_id) VALUES ('ROOM RENTAL','$ROOMDES','$GUESTN','$STARTD','$ENDD','$tot','0','$tot','$tot','$ROOMNAME','$GUESTNUM')";
+      $sql = "INSERT INTO `tblinventory`(`inv_name`, `inv_desc`, `inv_guestname`, `inv_startdate`, `inv_guest_end_date`, `inv_rate`, `inv_guestpaid`, `inv_guest_to_pay`, `inv_bal`, `inv_guest_room`, `User_user_id`) VALUES ('ROOM RENTAL','$ROOMDES','$GUESTN','$STARTD','$ENDD','$tot','0','$tot','$tot','$ROOMNAME','$GUESTNUM')";
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
 
