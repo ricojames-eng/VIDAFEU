@@ -8,8 +8,8 @@ if (isset($_POST['submit'])){
          @$C = 'FREE'; 
          @$D = 'FREE'; 
          @$E = 'FREE'; 
-         @$F = '03/15/1998'
-         @$G = '099999999'
+         @$F = '03/15/1998';
+         @$G = '099999999';
          @$H = 'FREE'; 
          @$I = 'FREE'; 
          @$J = 'FREE'; 
@@ -17,7 +17,7 @@ if (isset($_POST['submit'])){
          @$L = 'FREE@gmail.com'; 
          @$M = 'FREE'; 
          @$N = 'FREE'; 
-         @$O = '2710'; 
+         @$O = 'FREE'; 
 
       global $mydb;
       $sql = "INSERT INTO tblguest (REFNO, G_FNAME, G_LNAME, G_CITY, G_ADDRESS, DBIRTH, G_PHONE, G_NATIONALITY, G_COMPANY, G_CADDRESS, G_TERMS, G_EMAIL, G_UNAME, G_PASS, ZIP) VALUES ('$A','$B','$C','$D','$E','$F','$G','$H','$I','$J','$K','$L','$M','$N','$O')";
