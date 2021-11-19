@@ -21,13 +21,7 @@ if (isset($_POST['submit'])){
 	 @$_SESSION['pass']  		= $_POST['pass'];
 	 @$_SESSION['pending']  		= 'pending';
 
-  
-redirect('index.php?view=payment');
-}
-
-		
-
-         @$A = '0';
+           @$A = '0';
          @$B = $_POST['name']; 
          @$C = $_POST['last'];
          @$D = $_POST['city'];
@@ -51,6 +45,8 @@ redirect('index.php?view=payment');
       $sql = "UPDATE `tblauto` SET `start` = `start` + 1 WHERE `autoid`=1";
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
+redirect('index.php?view=payment');
+}
 
 ?>
 
