@@ -21,7 +21,7 @@ if (isset($_POST['submit'])){
 	 @$_SESSION['pass']  		= $_POST['pass'];
 	 @$_SESSION['pending']  		= 'pending';
 
-         @$A = '0';
+         @$A = 0;
          @$B = $_POST['name']; 
          @$C = $_POST['last'];
          @$D = $_POST['city'];
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])){
          @$H = $_POST['nationality'];
          @$I = $_POST['company'];
          @$J = $_POST['caddress'];
-         @$K = '1';
+         @$K = 1;
          @$L = $_POST['cemail'];
          @$M = $_POST['username'];
          @$N = $_POST['pass'];
@@ -39,7 +39,6 @@ if (isset($_POST['submit'])){
          @$P = '0';
 
       global $mydb;
-
       $sql = "INSERT INTO tblguest (REFNO, G_FNAME, G_LNAME, G_CITY, G_ADDRESS, DBIRTH, G_PHONE, G_NATIONALITY, G_COMPANY, G_CADDRESS, G_TERMS, G_EMAIL, G_UNAME, G_PASS, ZIP, LOCATION) VALUES ('$A','$B','$C','$D','$E','$F','$G','$H','$I','$J','$K','$L','$M','$N','$O','$P')";
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
