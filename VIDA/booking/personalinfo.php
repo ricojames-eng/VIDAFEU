@@ -3,28 +3,6 @@ require_once("/app/includes/initialize.php");
 
 if (isset($_POST['submit'])){
 
-	  	 @$A = 0;
-         @$B = $_POST['name']; 
-         @$C = $_POST['last'];
-         @$D = $_POST['city'];
-         @$E = $_POST['address'];
-         @$F = $_POST['dbirth'];
-         @$G = $_POST['phone'];
-         @$H = $_POST['nationality'];
-         @$I = $_POST['company'];
-         @$J = $_POST['caddress'];
-         @$K = 1;
-         @$L = $_POST['cemail'];
-         @$M = $_POST['username'];
-         @$N = $_POST['pass'];
-         @$O = $_POST['zip'];
-
-      
-      $sql = "INSERT INTO `tblguest`(`REFNO`, `G_FNAME`, `G_LNAME`, `G_CITY`, `G_ADDRESS`, `DBIRTH`, `G_PHONE`, `G_NATIONALITY`, `G_COMPANY`, `G_CADDRESS`, `G_TERMS`, `G_EMAIL`, `G_UNAME`, `G_PASS`, `ZIP`) VALUES ('0','$B','$C','$D','$E','$F','$G','$H','$I','$J','1','$L','$M','$N','$O')";
-      $mydb->setQuery($sql);
-      $mydb->executeQuery(); 
-
-
   @$arival   = $_SESSION['from']; 
   @$departure = $_SESSION['to'];
   @$ROOMID = $_SESSION['ROOMID'];
@@ -43,6 +21,31 @@ if (isset($_POST['submit'])){
 	 @$_SESSION['username']		= $_POST['username'];
 	 @$_SESSION['pass']  		= $_POST['pass'];
 	 @$_SESSION['pending']  		= 'pending';
+
+	 
+	  	 @$A = 0;
+         @$B = $_POST['name']; 
+         @$C = $_POST['last'];
+         @$D = $_POST['city'];
+         @$E = $_POST['address'];
+         @$F = $_POST['dbirth'];
+         @$G = $_POST['phone'];
+         @$H = $_POST['nationality'];
+         @$I = $_POST['company'];
+         @$J = $_POST['caddress'];
+         @$K = 1;
+         @$L = $_POST['cemail'];
+         @$M = $_POST['username'];
+         @$N = sha1($_SESSION['pass']);
+         @$O = $_POST['zip'];
+
+      
+      $sql = "INSERT INTO `tblguest`(`REFNO`, `G_FNAME`, `G_LNAME`, `G_CITY`, `G_ADDRESS`, `DBIRTH`, `G_PHONE`, `G_NATIONALITY`, `G_COMPANY`, `G_CADDRESS`, `G_TERMS`, `G_EMAIL`, `G_UNAME`, `G_PASS`, `ZIP`) VALUES ('0','$B','$C','$D','$E','$F','$G','$H','$I','$J','1','$L','$M','$N','$O')";
+      $mydb->setQuery($sql);
+      $mydb->executeQuery(); 
+
+
+
 
       $sql = "UPDATE `tblauto` SET `start` = `start` + 1 WHERE `autoid`=1";
       $mydb->setQuery($sql);
