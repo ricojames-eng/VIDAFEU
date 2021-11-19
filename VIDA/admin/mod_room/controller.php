@@ -70,7 +70,7 @@ function doInsert(){
 
 				$istrue = 1;
 
-				@$ROOMNUM =	$_POST['ROOMNUM'];
+						@$ROOMNUM =	$_POST['ROOMNUM'];
 						@$ROOM = $_POST['ROOM'];
 						@$ACCOMID =	$_POST['ACCOMID'];
 						@$ROOMDESC 	= $_POST['ROOMDESC'];
@@ -85,7 +85,7 @@ function doInsert(){
 						@$RateXtraKid =	$_POST['RATEXTRAKID'];
 
 						global $mydb;
-					 	$sql = "INSERT INTO tblroom (ROOMNUM, ACCOMID, ROOM, ROOMDESC, NUMPERSON, PRICE, ROOMIMAGE, OROOMNUM, RoomTypeID) VALUES ('$ROOMNUM','$ACCOMID','$ROOM','$ROOMDESC','$NUMPERSON','$PRICE','$ROOMIMAGE,'$OROOMNUM','0')";  // Booking_id = GUEST NUMBER;
+					 	$sql = "INSERT INTO tblroom (ROOMNUM, ACCOMID, ROOM, ROOMDESC, NUMPERSON, PRICE, ROOMIMAGE, OROOMNUM, RoomTypeID) VALUES ('$ROOMNUM','$ACCOMID','$ROOM','$ROOMDESC','$NUMPERSON','$PRICE','$ROOMIMAGE','$OROOMNUM','0')";  // Booking_id = GUEST NUMBER;
       					$mydb->setQuery($sql);
       					$mydb->executeQuery(); 
 
