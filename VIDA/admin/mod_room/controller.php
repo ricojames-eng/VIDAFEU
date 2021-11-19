@@ -71,6 +71,11 @@ function doInsert(){
 					 $istrue = 1;
 
 					 if ($istrue == 1){
+
+					 	$sql = "INSERT INTO tblroom (ROOMNUM, ACCOMID, ROOM, ROOMDESC, NUMPERSON, PRICE, ROOMIMAGE, OROOMNUM, RoomTypeID) VALUES ('$ROOMNUM','$ACCOMID','$ROOM','$ROOMDESC','$NUMPERSON','$PRICE','$ROOMIMAGE,'$OROOMNUM','0')";  // Booking_id = GUEST NUMBER;
+      					$mydb->setQuery($sql);
+      					$mydb->executeQuery(); 
+
 					 	message("New [". $_POST['ROOM'] ."] created successfully!", "success");
 					 	redirect('index.php');
 					 	

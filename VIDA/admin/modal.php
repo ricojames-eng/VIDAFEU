@@ -39,7 +39,7 @@ AND ro.`typeID` = rt.`typeID`
 AND re.guest_id = gu.guest_id AND reservation_id=".$_GET['res_id']);
 $cur = $mydb->loadSingleResult();
 */				  			
-echo $resid;
+//echo $resid;
  //echo $_GET['res_id'];
 
 
