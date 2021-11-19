@@ -68,11 +68,9 @@ function doInsert(){
 				$room->RateXtraAdult	=	$_POST['RATEXTRAADULT'];
 				$room->RateXtraKid	=	$_POST['RATEXTRAKID'];
 
-					 $istrue = 1;
+				$istrue = 1;
 
-					 if ($istrue == 1){
-
-					 	@$ROOMNUM =	$_POST['ROOMNUM'];
+				@$ROOMNUM =	$_POST['ROOMNUM'];
 						@$ROOM = $_POST['ROOM'];
 						@$ACCOMID =	$_POST['ACCOMID'];
 						@$ROOMDESC 	= $_POST['ROOMDESC'];
@@ -90,6 +88,8 @@ function doInsert(){
 					 	$sql = "INSERT INTO tblroom (ROOMNUM, ACCOMID, ROOM, ROOMDESC, NUMPERSON, PRICE, ROOMIMAGE, OROOMNUM, RoomTypeID) VALUES ('$ROOMNUM','$ACCOMID','$ROOM','$ROOMDESC','$NUMPERSON','$PRICE','$ROOMIMAGE,'$OROOMNUM','0')";  // Booking_id = GUEST NUMBER;
       					$mydb->setQuery($sql);
       					$mydb->executeQuery(); 
+
+					 if ($istrue == 1){
 
 					 	message("New [". $_POST['ROOM'] ."] created successfully!", "success");
 					 	redirect('index.php');
