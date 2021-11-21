@@ -377,7 +377,7 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
                   <input type="hidden" name="ROOMID" value="<?php echo $result->ROOMID ;?>">
 
                       <div class="card">
-                        <img class="card-img-top"  src="<?php echo WEB_ROOT .'/app/admin/mod_room/'.$result->ROOMIMAGE; ?>" alt="Room image description">
+                        <img class="card-img-top"  src="<?php echo WEB_ROOT .'admin/mod_room/'.$result->ROOMIMAGE; ?>" alt="Room image description">
                         <div class="card-body">
                           <div class="rooms_title"><h2><?php echo $result->ROOM ;?> <?php echo $result->ACCOMODATION ;?></h2></div>
                           <div class="rooms_text">
