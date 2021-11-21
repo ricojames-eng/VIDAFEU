@@ -157,14 +157,7 @@
                   <div class="custom-select">
                     <select name="person" id="person">
                       <option value="0">Adult - Child</option>
-                      <?php $sql ="SELECT distinct(`NUMPERSON`) as 'NumberPerson' FROM `tblroom`";
-                               $mydb->setQuery($sql);
-                             $cur = $mydb->loadResultList(); 
-                                foreach ($cur as $result) { 
-                                  echo '<option value='.$result->NumberPerson.'>'.$result->NumberPerson.'</option>';
-                                }
-
-                            ?>
+                      <input type="text" id="person" name="person" oninput="add_number()"> </input>
                     </select>
                   </div>
                   
