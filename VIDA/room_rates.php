@@ -156,8 +156,8 @@
                   <!-- PERSON -- >
                   <div class="custom-select">
                     <select name="person" id="person">
-                      <input type="text" id="Text1" name="TextBox1" oninput="add_number()"> </input>
-                      <input type="text" id="Text2" name="TextBox2" oninput="add_number()"> </input>
+                      <select type="text" id="Text1" name="TextBox1" oninput="add_number()">
+                      <select type="text" id="Text2" name="TextBox2" oninput="add_number()">
                     </select>
                   </div>
                   <!-- PERSON -- >
