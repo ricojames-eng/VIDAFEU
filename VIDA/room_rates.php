@@ -155,6 +155,12 @@
                   <div class="custom-select">
                     <select name="person" id="person">
                       <option value="0">Adult - Child</option>
+                       <label for="adult">Adult:</label>
+                      <input id="adult" type="number" name="adult" min="0" max="20" step="1">
+                      <span class="validity"></span>
+                      <label for="Child">Child/s:</label>
+                      <input id="Child" type="number" name="Child" min="0" max="20" step="1">
+                       <span class="validity"></span>
                       <?php $sql ="SELECT distinct(`NUMPERSON`) as 'NumberPerson' FROM `tblroom`";
                                $mydb->setQuery($sql);
                              $cur = $mydb->loadResultList(); 
