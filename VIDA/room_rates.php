@@ -153,17 +153,8 @@
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Check in" name="arrival" required="required" value="<?php echo isset($_POST['arrival']) ? $_POST['arrival'] :date('m/d/Y');?>"></div>
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
                   
-                  <!-- PERSON -- >
-                  <div class="custom-select">
-                    <select name="TextBox1" id="Text1">
-                      <option value="0" oninput="add_number()">0</option>
-                    </select>
-                  </div>
-                  <div class="custom-select">
-                    <select name="TextBox2" id="Text2">
-                      <option value="0" oninput="add_number()">0</option>
-                    </select>
-                    </div>
+                
+
                     <div class="custom-select">
                     <select name="person" id="person">
                       <option value="0">Adult - Child</option>
@@ -427,6 +418,7 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
  </div>
 
 <script>
+
  function add_number() {
                
                 var first_number = parseInt(document.getElementById("Text1").value);
@@ -435,4 +427,5 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
      
                 document.getElementById("person").value = result;
             }
+
 </script>
