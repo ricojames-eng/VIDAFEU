@@ -155,27 +155,12 @@
                   
 
                   <div class="custom-select">
-                    <select name="person" id="person" oninput="add_number()">
-                      <option value="0">Adult - Child</option>
-                    </select>
-
+       
+                    <input type="text" id="person" name="person" oninput="add_number();"/>
                     <input type="text" name="TextBox1" id="Text1" oninput="add_number();"/>
                     <input type="text" name="TextBox2" id="Text2" oninput="add_number();"/>
                   </div>
                   
-
-                  <div class="custom-select">
-                          <?php
-                         $accomodation = New Accomodation();
-                         $cur = $accomodation->listOfaccomodation(); 
-                          ?>
-                    <select  name="accomodation" id="person">
-                      <option value="0">Room Type</option>
-                      <?php  foreach ($cur as $result) { ?>
-                          <option value="<?php echo $result->ACCOMODATION; ?>"><?php echo $result->ACCOMODATION; ?></option>
-                          <?php  } ?>
-                    </select>
-                  </div>
                 </div>
                 <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
               </div>
