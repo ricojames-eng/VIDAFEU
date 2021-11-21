@@ -161,7 +161,7 @@
                           <?php  } ?>
                     </select>
                   </div>
-
+                  <div class="row">
                   <div class="custom-select2">
                     <center><a>Adult (12+)</a></center>
                     <input  name="TextBox1" id="Text1" oninput="add_number();">
@@ -173,8 +173,8 @@
                     <input  name="person" id="person" oninput="add_number();">
                     </input>
                     </div>
-
                 </div>
+              </div>
                 <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
               </div>
             </form>
@@ -401,22 +401,15 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
                            <?php echo $btn ; ?> 
                         </div>
                       </div>
-
-                  
-
                   </form>
-
-        
-                <?php  
- 
-                 }
-
-                ?>
-
               </div> 
-          </div>
+        </div>
  </div>
-
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
                    <script>
                      function add_number() {
                                    
