@@ -61,6 +61,16 @@
   filter: blur(10px);
   margin: -20px;
 }
+
+.custom-select2
+{
+  position: absolute;
+  height: 65px;
+  padding: 0px;
+  background: none;
+  border: none;
+  border-radius: 0px;
+}
 </style>
 
 <div class="discover_slider_container2">
@@ -165,7 +175,7 @@
                     </select>
                   </div>
 
-                  <div class="custom-select">
+                  <div class="custom-select2">
                     <input  name="TextBox1" id="Text1" oninput="add_number();">
                     <option type="text"> </option>
                     </input>
