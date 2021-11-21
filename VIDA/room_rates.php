@@ -401,9 +401,20 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
                            <?php echo $btn ; ?> 
                         </div>
                       </div>
+
+                  
+
                   </form>
+
+        
+                <?php  
+ 
+                 }
+
+                ?>
+
               </div> 
-        </div>
+          </div>
  </div>
 
                    <script>
