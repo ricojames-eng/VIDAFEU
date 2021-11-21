@@ -149,7 +149,19 @@
                 <div class="booking_form_inputs d-flex flex-row align-items-start justify-content-between flex-wrap">
                   <div class="booking_dropdown"><center><a>Arrival Date</a></center><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Check in" name="arrival" required="required" value="<?php echo isset($_POST['arrival']) ? $_POST['arrival'] :date('m/d/Y');?>"></div>
                   <div class="booking_dropdown"><center><a>Departure Date</a></center><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
-                  <div class="custom-select">
+                  
+                  <div class="custom-select2">
+                    <center><a>Adult (12+)</a></center>
+                    <input  name="TextBox1" id="Text1" oninput="add_number();">
+                    </input>
+                     <center><a>Children (4 ~ 11)</a></center>
+                    <input  name="TextBox2" id="Text2" oninput="add_number();">
+                    </input>
+                    <center><a>Total Persons</a></center>
+                    <input  name="person" id="person" oninput="add_number();">
+                    </input>
+                    </div>
+                    <div class="custom-select">
                     <center><a>Accomodation</a></center>
                           <?php
                          $accomodation = New Accomodation();
@@ -162,19 +174,8 @@
                           <?php  } ?>
                     </select>
                   </div>
-                  <div class="custom-select2">
-                    <center><a>Adult (12+)</a></center>
-                    <input  name="TextBox1" id="Text1" oninput="add_number();">
-                    </input>
-                     <center><a>Children (4 ~ 11)</a></center>
-                    <input  name="TextBox2" id="Text2" oninput="add_number();">
-                    </input>
-                    <center><a>Total Persons</a></center>
-                    <input  name="person" id="person" oninput="add_number();">
-                    </input>
-                    </div>
                 </div>
-                <center><a></a></center>
+                <center><a>SEARCH BUTTON</a></center>
                 <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
               </div>
             </form>
@@ -240,7 +241,7 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
 
 
  
- $query = "SELECT * FROM `tblroom` r ,`tblaccomodation` a WHERE r.`ACCOMID`=a.`ACCOMID`   AND `NUMPERSON` = " . $_POST['person2'];
+ $query = "SELECT * FROM `tblroom` r ,`tblaccomodation` a WHERE r.`ACCOMID`=a.`ACCOMID`   AND `NUMPERSON` = " . $_POST['person'];
     
 
 }elseif(isset($_GET['q'])){
