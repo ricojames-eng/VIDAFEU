@@ -157,26 +157,15 @@
                          $accomodation = New Accomodation();
                          $cur = $accomodation->listOfaccomodation(); 
                           ?>
-                    <select  name="accomodation" id="person">
+                    <select  name="accomodation" id="person2">
                       <option value="0">Room Type</option>
                       <?php  foreach ($cur as $result) { ?>
                           <option value="<?php echo $result->ACCOMODATION; ?>"><?php echo $result->ACCOMODATION; ?></option>
                           <?php  } ?>
                     </select>
                   </div>
-                  <div class="custom-select">
 
-                    <script>
-                     function add_number() {
-                                   
-                                    var first_number = parseInt(document.getElementById("Text1").value);
-                                    var second_number = parseInt(document.getElementById("Text2").value);
-                                    var result = first_number + second_number;
-                         
-                                    document.getElementById("person").value = result;
-                                }
-                    </script>
-                    
+                  <div class="custom-select">
                     <input  name="TextBox1" id="Text1" oninput="add_number();">
                     <option type="text"> </option>
                     </input>
@@ -434,3 +423,13 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
           </div>
  </div>
 
+                   <script>
+                     function add_number() {
+                                   
+                                    var first_number = parseInt(document.getElementById("Text1").value);
+                                    var second_number = parseInt(document.getElementById("Text2").value);
+                                    var result = first_number + second_number;
+                         
+                                    document.getElementById("person").value = result;
+                                }
+                    </script>
