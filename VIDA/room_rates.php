@@ -68,13 +68,17 @@
 .booking_container
 {
   height: 110px;
-  width: 500px;
+  width: 100%;
   background: #ffffff;
   margin-top: -110px;
   padding-left: 0px;
   padding-right: 0px;
 }
-
+.booking_form_inputs
+{
+  width: calc(100% - 230px);
+  height: 65px;
+}
 </style>
 
 <div class="discover_slider_container2">
