@@ -167,7 +167,7 @@
                     <option type="text" oninput="add_number();"> </option>
                     </select>
                   </div>
-                  </div>
+              
                 
                   <div class="custom-select">
                           <?php
