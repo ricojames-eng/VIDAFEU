@@ -420,12 +420,7 @@ var do_calcul = function() {
     var num1 = Number(document.getElementById("input1").value);
     var num2 = Number(document.getElementById("input2").value);
     var result;
-
-    if (this.id == "add") {
-        result = num1 + num2;
-    } else if (this.id == "substract") {
-        result = num1 - num2;
-    }
+    result = num1 + num2;
     document.getElementById("person").value = result;
 };
 
