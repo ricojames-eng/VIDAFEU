@@ -61,17 +61,6 @@
   filter: blur(10px);
   margin: -20px;
 }
-
-.custom-select2
-{
-  position: relative;
-  height: 65px;
-  width: 10px;
-  padding: 0px;
-  background: none;
-  border: none;
-  border-radius: 0px;
-}
 </style>
 
 <div class="discover_slider_container2">
@@ -148,9 +137,6 @@
     </div>
   </div>
 </div>
-
-<br></br>
-
  <!-- Booking -->
 
   <div class="booking">
@@ -181,11 +167,11 @@
                     <option type="text"> </option>
                     </input>
 
-                         <input  name="TextBox2" id="Text2" oninput="add_number();">
+                    <input  name="TextBox2" id="Text2" oninput="add_number();">
                     <option type="text"> </option>
                     </input>
 
-                      <input  name="person" id="person" oninput="add_number();">
+                    <input  name="person" id="person" oninput="add_number();">
                     <option type="text"> </option>
                     </input>
                     </div>
@@ -199,6 +185,8 @@
       </div>
     </div>
   </div>
+<br></br>
+<br></br>
 <br></br>
   <?php
 $msg = "";
