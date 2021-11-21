@@ -155,10 +155,10 @@
                   
                   <!-- PERSON -- >
                   <div class="custom-select">
-                    <select name="person" id="person">
+                      <select name="person" id="person"> </select>
                       <select type="text" id="Text1" name="TextBox1" oninput="add_number()"> </select>
                       <select type="text" id="Text2" name="TextBox2" oninput="add_number()"> </select>
-                    </select>
+                    
                   </div>
                   <!-- PERSON -- >
 
