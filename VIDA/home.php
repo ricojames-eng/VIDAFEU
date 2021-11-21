@@ -171,11 +171,11 @@
               </div>
               <!-- Slide -->
               <div class="slide">
-                <div class="background_image" style="background-image:url(images/golfroom2.jpg)"></div>
+                <div class="background_image" style="background-image:url(images/rooms_1.jpg)"></div>
               </div>
               <!-- Slide -->
               <div class="slide">
-                <div class="background_image" style="background-image:url(images/golfroom3.jpg)"></div>
+                <div class="background_image" style="background-image:url(images/golfroom_3.jpg)"></div>
               </div>
             </div>
           </div>
@@ -266,7 +266,7 @@
               </div>
               <!-- Slide -->
               <div class="slide">
-                <div class="background_image" style="background-image:url(images/golfroom_3.jpg)"></div>
+                <div class="background_image" style="background-image:url(images/golfroom3.jpg)"></div>
               </div>       
             </div>
           </div>
