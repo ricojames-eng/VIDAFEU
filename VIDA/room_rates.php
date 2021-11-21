@@ -138,10 +138,17 @@
   </div>
 </div>
  <!-- Booking -->
-
   <div class="booking">
     <div class="container">
- <div class="custom-select2">
+
+      <div class="row">
+        <div class="col">
+          <div class="booking_container d-flex flex-row align-items-end justify-content-start"> 
+            <form action="<?php echo WEB_ROOT;?>index.php?p=booking" method="POST" class="booking_form" autocomplete="off">
+              <div class="booking_form_container d-flex flex-lg-row flex-column align-items-start justify-content-start flex-wrap">
+                <div class="booking_form_inputs d-flex flex-row align-items-start justify-content-between flex-wrap">
+
+                  <div class="custom-select2">
                     <input  name="TextBox1" id="Text1" oninput="add_number();">
                     <option type="text"> </option>
                     </input>
@@ -154,6 +161,16 @@
                     <option type="text"> </option>
                     </input>
                     </div>
+
+                </div>
+                <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  <div class="booking">
+    <div class="container">
 
       <div class="row">
         <div class="col">
@@ -175,6 +192,21 @@
                           <?php  } ?>
                     </select>
                   </div>
+
+                  <div class="custom-select2">
+                    <input  name="TextBox1" id="Text1" oninput="add_number();">
+                    <option type="text"> </option>
+                    </input>
+
+                    <input  name="TextBox2" id="Text2" oninput="add_number();">
+                    <option type="text"> </option>
+                    </input>
+
+                    <input  name="person" id="person" oninput="add_number();">
+                    <option type="text"> </option>
+                    </input>
+                    </div>
+
                 </div>
                 <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
               </div>
@@ -182,6 +214,8 @@
           </div>
         </div>
       </div>
+
+
     </div>
   </div>
 <br></br>
