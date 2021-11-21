@@ -139,9 +139,7 @@
 </div>
 
 <br></br>
-<br></br>
-<br></br>
-<br></br>
+
  <!-- Booking -->
 
   <div class="booking">
