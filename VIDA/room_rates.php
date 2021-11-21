@@ -155,13 +155,13 @@
                   
 
                   <div class="custom-select">
-                    <select>
+                    <select name="person" id="person">
                     <input type="text" name="person" id="person" oninput="add_number();"/>
                     <input type="text" name="TextBox1" id="Text1" oninput="add_number();"/>
                     <input type="text" name="TextBox2" id="Text2" oninput="add_number();"/>
                     </select>
                   </div>
-                  
+
                 
                   <div class="custom-select">
                           <?php
