@@ -154,11 +154,7 @@
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
                   <div class="custom-select">
                     <select name="person" id="person">
-
-                      <label for="person">Child:</label>
-                      <input id="person" type="number" name="person" min="0" max="20" step="1">
-
-                      <option value="0">Adult - Child</option>
+                      <option value="0">Adult - Child</option>       
                       <?php $sql ="SELECT distinct(`NUMPERSON`) as 'NumberPerson' FROM `tblroom`";
                                $mydb->setQuery($sql);
                              $cur = $mydb->loadResultList(); 
@@ -166,7 +162,7 @@
                                   echo '<option value='.$result->NumberPerson.'>'.$result->NumberPerson.'</option>';
                                 }
 
-                            ?>
+                            ?> 
                     </select>
                   </div>
                   <div class="custom-select">
