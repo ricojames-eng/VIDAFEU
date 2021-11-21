@@ -155,19 +155,21 @@
                   
                   <!-- PERSON -- >
                   <div class="custom-select">
-
                     <select name="TextBox1" id="Text1">
                       <option value="0" oninput="add_number()">0</option>
                     </select>
-
+                  </div>
+                  <div class="custom-select">
                     <select name="TextBox2" id="Text2">
                       <option value="0" oninput="add_number()">0</option>
                     </select>
-
+                    </div>
+                    <div class="custom-select">
                     <select name="person" id="person">
                       <option value="0">Adult - Child</option>
                     </select>
-                  </div>
+                   </div>
+                 
                   <!-- PERSON -- >
 
                   <div class="custom-select">
