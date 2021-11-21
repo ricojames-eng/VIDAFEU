@@ -160,6 +160,7 @@
                     </select>
 
                     <input type="text" name="TextBox1" id="Text1" oninput="add_number();"/>
+                    <input type="text" name="TextBox2" id="Text2" oninput="add_number();"/>
                   </div>
                   
 
