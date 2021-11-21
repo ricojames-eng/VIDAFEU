@@ -62,8 +62,8 @@
   margin: -20px;
 }
 
-input,
-textarea {
+.input,
+.textarea {
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   margin: 0;
@@ -71,13 +71,13 @@ textarea {
   padding: 10px;
 }
 
-input[type="button"] {
+.input[type="button"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
@@ -119,7 +119,7 @@ input::-webkit-inner-spin-button {
   left: -13px;
 }
 
-input[type="number"] {
+.input[type="number"] {
   -moz-appearance: textfield;
   -webkit-appearance: none;
 }
