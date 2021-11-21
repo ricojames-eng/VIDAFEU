@@ -146,7 +146,7 @@
       <div class="row intro_row">
         <div class="col-xl-8 col-lg-10 offset-xl-2 offset-lg-1">
           <div class="intro_text text-center">
-            <p>SHORT DESCRIPTION</p>
+            <p>Experience the world’s greatest show – Expo 2020 – for free with Vida Hotels and Resorts with 2 complimentary Expo tickets (1-Day Passes) when you book and stay with us for at least 3 nights between October 2021 and March 2022.</p>
           </div>
         </div>
       </div>
@@ -167,15 +167,15 @@
             <div class="owl-carousel owl-theme rooms_slider">   
               <!-- Slide -->
               <div class="slide">
-                <div class="background_image" style="background-image:url(images/rooms_1.jpg)"></div>
+                <div class="background_image" style="background-image:url(images/golfroom1.jpg)"></div>
               </div>
               <!-- Slide -->
               <div class="slide">
-                <div class="background_image" style="background-image:url(images/rooms_2.jpg)"></div>
+                <div class="background_image" style="background-image:url(images/golfroom2.jpg)"></div>
               </div>
               <!-- Slide -->
               <div class="slide">
-                <div class="background_image" style="background-image:url(images/rooms_3.jpg)"></div>
+                <div class="background_image" style="background-image:url(images/golfroom3.jpg)"></div>
               </div>
             </div>
           </div>
@@ -185,28 +185,28 @@
           <div class="rooms_right_content">
             <div class="section_title">
               <div>Rooms</div>
-              <h1>Luxury Double Suite</h1>
+              <h1>Deluxe Rooms</h1>
             </div>
             <div class="rooms_text">
-              <p>ROOM DESCRIPTION</p>
+              <p>Offers you a comfortable, creative space to relax in. Each one features Jumeirah Lake Towers views.</p>
             </div>
             <div class="rooms_list">
               <ul>
                 <li class="d-flex flex-row align-items-center justify-content-start">
                   <img src="images/check.png" alt="">
-                  <span>ROOM</span>
+                  <span>Maximum occupancy: 2 Adult(s) + 1 Child(ren).</span>
                 </li>
                 <li class="d-flex flex-row align-items-center justify-content-start">
                   <img src="images/check.png" alt="">
-                  <span>ROOM</span>
+                  <span>Room Type: Deluxe Room.</span>
                 </li>
                 <li class="d-flex flex-row align-items-center justify-content-start">
                   <img src="images/check.png" alt="">
-                  <span>ROOM</span>
+                  <span>Amenities: King Sized Bed.</span>
                 </li>
               </ul>
             </div>
-            <div class="rooms_price">69/<span>Night</span></div>  
+            <div class="rooms_price"><span></span></div>  
             <br>
             <button class="buttonbooknow"><a href="<?php echo WEB_ROOT;?>index.php?p=rooms">BOOK NOW</a></button>
 
@@ -225,28 +225,28 @@
           <div class="rooms_left_content">
             <div class="section_title">
               <div>Rooms</div>
-              <h1>Luxury Single Room</h1>
+              <h1>Golf View Deluxe Rooms</h1>
             </div>
             <div class="rooms_text">
-              <p>ROOM DESCRIPTION</p>
+              <p>The Deluxe Golf View Rooms offer you a comfortable, creative space to relax in. Each one features spectacular golf course views.</p>
             </div>
             <div class="rooms_list">
               <ul>
                 <li class="d-flex flex-row align-items-center justify-content-start">
                   <img src="images/check.png" alt="">
-                  <span>ROOM</span>
+                  <span>Maximum occupancy: 2 Adult(s) + 1 Child(ren).</span>
                 </li>
                 <li class="d-flex flex-row align-items-center justify-content-start">
                   <img src="images/check.png" alt="">
-                  <span>ROOM</span>
+                  <span>Room Type: Deluxe Golf View Room.</span>
                 </li>
                 <li class="d-flex flex-row align-items-center justify-content-start">
                   <img src="images/check.png" alt="">
-                  <span>ROOM</span>
+                  <span>Amenities: King Sized Bed.</span>
                 </li>
               </ul>
             </div>
-            <div class="rooms_price">69/<span>Night</span></div> 
+            <div class="rooms_price"><span></span></div> 
             <br>
             <button class="buttonbooknow"><a href="<?php echo WEB_ROOT;?>index.php?p=gallery">EXPLORE HOTEL</a></button> 
             </br> 
@@ -258,15 +258,15 @@
             <div class="owl-carousel owl-theme rooms_slider">          
               <!-- Slide -->
               <div class="slide">
-                <div class="background_image" style="background-image:url(images/room_2.jpg)"></div>
+                <div class="background_image" style="background-image:url(images/golfroom_1.jpg)"></div>
               </div>
               <!-- Slide -->
               <div class="slide">
-                <div class="background_image" style="background-image:url(images/room_3.jpg)"></div>
+                <div class="background_image" style="background-image:url(images/golfroom_2.jpg)"></div>
               </div>
               <!-- Slide -->
               <div class="slide">
-                <div class="background_image" style="background-image:url(images/GALLERY1.png)"></div>
+                <div class="background_image" style="background-image:url(images/golfroom_3.png)"></div>
               </div>       
             </div>
           </div>
@@ -293,13 +293,13 @@
         <div class="row discover_row">
           <div class="col-lg-5">
             <div class="discover_highlight">
-              <p>DESCRIPTION 2</p>
+              <p>Vida Emirate Hotel and Resort </p>
             </div>
             <!-- <div class="button discover_button"><a href="#">discover</a></div> -->
           </div>
           <div class="col-lg-7">
             <div class="discover_text">
-              <p>DESCRIPTION 3</p>
+              <p>A prestigious Hotel that aims to give the full experience to its visitors and guest.</p>
             </div>
           </div>
         </div>
@@ -313,21 +313,21 @@
         <div class="slide">
           <div class="background_image" style="background-image:url(images/discover_1.jpg)"></div>
           <div class="discover_overlay d-flex flex-column align-items-center justify-content-center">
-            <h1><a href="#">DESCRIPTION 1</a></h1>
+            <h1><a href="#">Luxurious Rooms</a></h1>
           </div>
         </div>
         <!-- Slide -->
         <div class="slide">
           <div class="background_image" style="background-image:url(images/discover_2.jpg)"></div>
           <div class="discover_overlay d-flex flex-column align-items-center justify-content-center">
-            <h1><a href="#">DESCRIPTION 2</a></h1>
+            <h1><a href="#">Luxurious Pools</a></h1>
           </div>
         </div>
         <!-- Slide -->
         <div class="slide">
           <div class="background_image" style="background-image:url(images/discover_3.jpg)"></div>
           <div class="discover_overlay d-flex flex-column align-items-center justify-content-center">
-            <h1><a href="#">DESCRIPTION 3</a></h1>
+            <h1><a href="#">Unlimited Ammenities</a></h1>
           </div>
         </div>
       </div>
