@@ -152,16 +152,14 @@
                 <div class="booking_form_inputs d-flex flex-row align-items-start justify-content-between flex-wrap">
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Check in" name="arrival" required="required" value="<?php echo isset($_POST['arrival']) ? $_POST['arrival'] :date('m/d/Y');?>"></div>
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
-                 
+                  
 
                   <div class="custom-select">
-                    <!-- <select name="person" id="person"> -->
-                    <input type="text" id="val1">
-                    <input type="text" id="val2">
-                   
-                    
+                    <input type="text" id="Text1" name="TextBox1" oninput="add_number()">
+                    <input type="text" id="Text2" name="TextBox2" oninput="add_number()">
+                    <select name="person" id="person"> </select>
                   </div>
-                   <input type="button" value="Calculate" onclick="calculate();">
+                  
 
                   <div class="custom-select">
                           <?php
@@ -416,13 +414,14 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
               </div> 
           </div>
  </div>
+
 <script>
-function calculate(){
-var val1 = document.getElementById('val1').value;
-var val2 = document.getElementById('val2').value;
-var res = (parseFloat(val1)+parseFloat(val2))
-
-alert(res);
-
-}
+ function add_number() {
+               
+                var first_number = parseInt(document.getElementById("Text1").value);
+                var second_number = parseInt(document.getElementById("Text2").value);
+                var result = first_number + second_number;
+     
+                document.getElementById("txtresult").value = result;
+            }
 </script>
