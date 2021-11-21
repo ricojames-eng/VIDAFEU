@@ -1,5 +1,7 @@
   <!-- Booking -->
 
+ <!-- Booking -->
+
   <div class="booking">
     <div class="container">
       <div class="row">
@@ -8,22 +10,22 @@
             <form action="<?php echo WEB_ROOT;?>index.php?p=booking" method="POST" class="booking_form" autocomplete="off">
               <div class="booking_form_container d-flex flex-lg-row flex-column align-items-start justify-content-start flex-wrap">
                 <div class="booking_form_inputs d-flex flex-row align-items-start justify-content-between flex-wrap">
-                  <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Check in" name="arrival" required="required" value="<?php echo isset($_POST['arrival']) ? $_POST['arrival'] :date('m/d/Y');?>"></div>
-                  <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
-                  <div class="custom-select">
-                    <select name="person" id="person">
-                      <option value="0">Adult - Child</option>
-                      <?php $sql ="SELECT distinct(`NUMPERSON`) as 'NumberPerson' FROM `tblroom`";
-                               $mydb->setQuery($sql);
-                             $cur = $mydb->loadResultList(); 
-                                foreach ($cur as $result) { 
-                                  echo '<option value='.$result->NumberPerson.'>'.$result->NumberPerson.'</option>';
-                                }
-
-                            ?>
-                    </select>
-                  </div>
-                  <div class="custom-select">
+                  <div class="booking_dropdown"><center><a>Arrival Date</a></center><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Check in" name="arrival" required="required" value="<?php echo isset($_POST['arrival']) ? $_POST['arrival'] :date('m/d/Y');?>"></div>
+                  <div class="booking_dropdown"><center><a>Departure Date</a></center><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
+                  
+                  <div class="custom-select2">
+                    <center><a>Adult (12+)</a></center>
+                    <input  name="TextBox1" id="Text1" oninput="add_number();">
+                    </input>
+                     <center><a>Children (4 ~ 11)</a></center>
+                    <input  name="TextBox2" id="Text2" oninput="add_number();">
+                    </input>
+                    <center><a>Total Persons</a></center>
+                    <input  name="person" id="person" oninput="add_number();">
+                    </input>
+                    </div>
+                    <div class="custom-select">
+                    <center><a>Accomodation</a></center>
                           <?php
                          $accomodation = New Accomodation();
                          $cur = $accomodation->listOfaccomodation(); 
@@ -36,6 +38,7 @@
                     </select>
                   </div>
                 </div>
+                <center><a>AVAILABILITY</a></center>
                 <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
               </div>
             </form>
