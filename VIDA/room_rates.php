@@ -37,15 +37,15 @@
 }
 
 .glass-container {
-  width: 100%;
-  height: 40rem;
+    width: 100%;
+  height: 55rem;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
   border-radius: 5px;
   position: relative;
   z-index: 1;
   background: inherit;
   overflow: hidden;
-  top: -250px;
+  top: -260px;
 }
 
 .glass-container:before {
