@@ -68,7 +68,7 @@
 .booking_container
 {
   height: 110px;
-  width: 100%;
+  width: 500px;
   background: #ffffff;
   margin-top: -110px;
   padding-left: 0px;
