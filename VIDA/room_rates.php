@@ -405,11 +405,7 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
               </div> 
         </div>
  </div>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+
                    <script>
                      function add_number() {
                                    
