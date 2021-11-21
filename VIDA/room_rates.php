@@ -60,6 +60,20 @@
   box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
   filter: blur(10px);
   margin: -20px;
+
+  .booking
+{
+  background: #ffffff;
+}
+.booking_container
+{
+  height: 110px;
+  width: 100%;
+  background: #ffffff;
+  margin-top: -110px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
 }
 </style>
 
@@ -173,13 +187,12 @@
                     <input  name="TextBox2" id="Text2" oninput="add_number();">
                     <option type="text"> </option>
                     </input>
-                  </div>
 
-                  <div class="custom-select">
                     <input  name="person" id="person" oninput="add_number();">
                     <option type="text"> </option>
                     </input>
                   </div>
+
                 </div>
                 <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
               </div>
