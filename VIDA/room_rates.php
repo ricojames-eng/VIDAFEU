@@ -65,7 +65,7 @@
 .booking_form_button
 {
   width: 280px;
-  height: 65px;
+  height: 90px;
   background: #ff9000;
   margin-left: 9px;
   border: none;
