@@ -161,7 +161,6 @@
                           <?php  } ?>
                     </select>
                   </div>
-                  <div class="row">
                   <div class="custom-select2">
                     <center><a>Adult (12+)</a></center>
                     <input  name="TextBox1" id="Text1" oninput="add_number();">
@@ -174,7 +173,6 @@
                     </input>
                     </div>
                 </div>
-              </div>
                 <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
               </div>
             </form>
@@ -379,7 +377,7 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
                   <input type="hidden" name="ROOMID" value="<?php echo $result->ROOMID ;?>">
 
                       <div class="card">
-                        <img class="card-img-top"  src="<?php echo WEB_ROOT .'admin/mod_room/'.$result->ROOMIMAGE; ?>" alt="Room image description">
+                        <img class="card-img-top"  src="<?php echo WEB_ROOT .'/app/admin/mod_room/rooms/'.$result->ROOMIMAGE; ?>" alt="Room image description">
                         <div class="card-body">
                           <div class="rooms_title"><h2><?php echo $result->ROOM ;?> <?php echo $result->ACCOMODATION ;?></h2></div>
                           <div class="rooms_text">
