@@ -155,9 +155,15 @@
                   
 
                   <div>
-                      <input name="Adult" id="input1" type="number" min="0" oninput="this.value = Math.abs(this.value) value="0"> </input>
-                      <input name="Children" id="input2" type="number" min="0" oninput="this.value = Math.abs(this.value)" value="0"> </input>
-                      <input id="person" name="person" size="5"/>
+                      <input name="person" id="person" type="number" min="0" oninput="this.value = Math.abs(this.value)"> </input>
+                      <p>input 1: <input id="input1" size="5"/></p><br>
+
+                      <p>input 2: <input id="input2" size="5"/></p><br>
+
+                      <button class="sign" id="add">+</button>
+                      <button class="sign" id="substract">-</button>
+
+                      <p>Answer:<input id="output1" size="5"/></p>
                   </div>
                   
 
@@ -420,7 +426,17 @@ var do_calcul = function() {
     var num1 = Number(document.getElementById("input1").value);
     var num2 = Number(document.getElementById("input2").value);
     var result;
-    result = num1 + num2;
-    document.getElementById("person").value = result;
+
+    if (this.id == "add") {
+        result = num1 + num2;
+    } else if (this.id == "substract") {
+        result = num1 - num2;
+    }
+    document.getElementById("output1").value = result;
 };
+
+var signs_buttons = document.getElementsByClassName("sign");
+for(var i=0;i<signs_buttons.length;i++){
+    signs_buttons[i].addEventListener('click', do_calcul, false);
+}
 </script>
