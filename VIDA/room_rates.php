@@ -155,13 +155,12 @@
                  
                   <!-- SELECT PERSONS -->
                   <div class="custom-select">
-                    <select type="number" name="person" id="person" min="0" step="1">
-                      <option value="0">Adult - Child</option>       
+                    <input name="person" id="person" type="number" min="0" step="1">
+                      <option value="0">Adult - Child</option>               
                     </select>
                   </div>
                   <!-- SELECT PERSONS -->
                   
-
                   <div class="custom-select">
                           <?php
                          $accomodation = New Accomodation();
