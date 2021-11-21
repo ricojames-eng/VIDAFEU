@@ -154,18 +154,26 @@
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
                   
 
-                  <div>
-                      <input name="person" id="person" type="number" min="0" oninput="this.value = Math.abs(this.value)"> </input>
-                      <p>input 1: <input id="input1" size="5"/></p><br>
+                  <div class="custom-select">
+                    <select name="person" id="person">
 
-                      <p>input 2: <input id="input2" size="5"/></p><br>
+                      <option value="0">Adult - Child</option>
+                      
+                      <p>input 1: <input id="input1" size="5" /></p><br>
 
-                      <button class="sign" id="add">+</button>
-                      <button class="sign" id="substract">-</button>
+                      <p>input 2: <input id="input2" size="5" /></p><br>
 
-                      <p>Answer:<input id="output1" size="5"/></p>
+                      <button id="add" onclick="myFunction('add')">+</button>
+
+                      <p>Answer:<input id="output1" size="5" /></p>
+
+                      <p id="idOne">
+                      <p id="idTwo">
+                      <p id="answer">
+                      
+                    </select>
                   </div>
-                  
+                 
 
                   <div class="custom-select">
                           <?php
@@ -422,21 +430,21 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
  </div>
 
 <script>
-var do_calcul = function() {
-    var num1 = Number(document.getElementById("input1").value);
-    var num2 = Number(document.getElementById("input2").value);
-    var result;
 
-    if (this.id == "add") {
-        result = num1 + num2;
-    } else if (this.id == "substract") {
-        result = num1 - num2;
+    function myFunction(id) {
+        var num1 = document.getElementById("input1").value;
+        var num2 = document.getElementById("input2").value;
+        var result;
+
+
+        if (id == "add") {
+            result = Number(num1) + Number(num2);
+        }
+
+
+        document.getElementById("idOne").value = num1;
+        document.getElementById("idTwo").value = num2;
+        document.getElementById("output1").value = result;
+
     }
-    document.getElementById("output1").value = result;
-};
-
-var signs_buttons = document.getElementsByClassName("sign");
-for(var i=0;i<signs_buttons.length;i++){
-    signs_buttons[i].addEventListener('click', do_calcul, false);
-}
 </script>
