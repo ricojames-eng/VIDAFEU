@@ -155,15 +155,14 @@
                   
 
                   <div class="custom-select">
-                    <select name="person" id="person" oninput="add_number()">
-                      <option value="0">Adult - Child</option>
-                    </select>
-
+                    <select>
+                    <input type="text" name="person" id="person" oninput="add_number();"/>
                     <input type="text" name="TextBox1" id="Text1" oninput="add_number();"/>
                     <input type="text" name="TextBox2" id="Text2" oninput="add_number();"/>
+                    </select>
                   </div>
                   
-
+                
                   <div class="custom-select">
                           <?php
                          $accomodation = New Accomodation();
