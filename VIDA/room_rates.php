@@ -76,7 +76,7 @@
   text-transform: uppercase;
   letter-spacing: 0.075em;
   cursor: pointer;
-  top: -10px;
+
 }
 </style>
 
@@ -193,7 +193,7 @@
                   </div>
                 </div>
                 
-                <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
+                <button class="booking_form_button">FIND A ROOM</button>
               </div>
             </form>
           </div>
