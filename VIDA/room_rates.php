@@ -187,9 +187,7 @@
                     <input  name="TextBox1" id="Text1" oninput="add_number();">
                     <option type="text"> </option>
                     </input>
-                    </div>
 
-                    <div class="custom-select">
                     <input  name="TextBox2" id="Text2" oninput="add_number();">
                     <option type="text"> </option>
                     </input>
