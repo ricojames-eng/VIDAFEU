@@ -141,6 +141,20 @@
 
   <div class="booking">
     <div class="container">
+ <div class="custom-select2">
+                    <input  name="TextBox1" id="Text1" oninput="add_number();">
+                    <option type="text"> </option>
+                    </input>
+
+                    <input  name="TextBox2" id="Text2" oninput="add_number();">
+                    <option type="text"> </option>
+                    </input>
+
+                    <input  name="person" id="person" oninput="add_number();">
+                    <option type="text"> </option>
+                    </input>
+                    </div>
+
       <div class="row">
         <div class="col">
           <div class="booking_container d-flex flex-row align-items-end justify-content-start"> 
@@ -161,21 +175,6 @@
                           <?php  } ?>
                     </select>
                   </div>
-
-                  <div class="custom-select2">
-                    <input  name="TextBox1" id="Text1" oninput="add_number();">
-                    <option type="text"> </option>
-                    </input>
-
-                    <input  name="TextBox2" id="Text2" oninput="add_number();">
-                    <option type="text"> </option>
-                    </input>
-
-                    <input  name="person" id="person" oninput="add_number();">
-                    <option type="text"> </option>
-                    </input>
-                    </div>
-
                 </div>
                 <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
               </div>
@@ -185,8 +184,6 @@
       </div>
     </div>
   </div>
-<br></br>
-<br></br>
 <br></br>
   <?php
 $msg = "";
