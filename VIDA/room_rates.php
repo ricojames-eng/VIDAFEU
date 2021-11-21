@@ -155,7 +155,7 @@
                   
 
                   <div class="custom-select">
-                      <input name="person" id="person" type="number" id="number" min="0"></input>
+                      <option name="person" id="person" type="number" id="number" min="0">Adult/s - Child/ren</option>
                   </div>
                  
 
