@@ -155,7 +155,7 @@
                   
 
                   <div>
-                      <input name="person" id="person" type="number" min="0" oninput="this.value = Math.abs(this.value)" />
+                      <input name="person" id="person" type="number" min="0" oninput="this.value = Math.abs(this.value)"> </input>
                   </div>
                   
 
