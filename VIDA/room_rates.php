@@ -60,7 +60,7 @@
   box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
   filter: blur(10px);
   margin: -20px;
-
+}
   .booking
 {
   background: #ffffff;
@@ -74,6 +74,10 @@
   padding-left: 0px;
   padding-right: 0px;
 }
+.booking_form_inputs
+{
+  width: calc(100% - 400px);
+  height: 65px;
 }
 </style>
 
@@ -184,11 +188,13 @@
                     <option type="text"> </option>
                     </input>
                     </div>
+
                     <div class="custom-select">
                     <input  name="TextBox2" id="Text2" oninput="add_number();">
                     <option type="text"> </option>
                     </input>
                     </div>
+
                     <div class="custom-select">
                     <input  name="person" id="person" oninput="add_number();">
                     <option type="text"> </option>
