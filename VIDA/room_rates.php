@@ -153,10 +153,13 @@
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Check in" name="arrival" required="required" value="<?php echo isset($_POST['arrival']) ? $_POST['arrival'] :date('m/d/Y');?>"></div>
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
                   
-                  
+
                   <div class="custom-select">
                     <select name="person" id="person">
                       <option value="0">Adult - Child</option>
+                      <input type="number" min="0" oninput="this.value = Math.abs(this.value)">
+                      
+
                       <?php $sql ="SELECT distinct(`NUMPERSON`) as 'NumberPerson' FROM `tblroom`";
                                $mydb->setQuery($sql);
                              $cur = $mydb->loadResultList(); 
