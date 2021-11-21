@@ -154,11 +154,11 @@
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
                   
 
-                  <div class="custom-select">
+                  
                     <input type="text" id="Text1" name="TextBox1" oninput="add_number()"> </input>
                     <input type="text" id="Text2" name="TextBox2" oninput="add_number()"> </input>
                     <select name="person" id="person"> </select>
-                  </div>
+                
                   
 
                   <div class="custom-select">
@@ -422,6 +422,6 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
                 var second_number = parseInt(document.getElementById("Text2").value);
                 var result = first_number + second_number;
      
-                document.getElementById("txtresult").value = result;
+                document.getElementById("person").value = result;
             }
 </script>
