@@ -155,7 +155,7 @@
                   
 
                   <div class="custom-select">
-                      <input name="person" id="person" type="number" id="number" min="0" />
+                      <input name="person" id="person" type="number" id="number" min="0"></input>
                   </div>
                  
 
