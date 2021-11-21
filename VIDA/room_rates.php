@@ -156,18 +156,7 @@
 
                   <div class="custom-select">
                     <select name="person" id="person">
-                      <option value="0">Adult - Child</option>
                       <input type="number" min="0" oninput="this.value = Math.abs(this.value)">
-                      
-
-                      <?php $sql ="SELECT distinct(`NUMPERSON`) as 'NumberPerson' FROM `tblroom`";
-                               $mydb->setQuery($sql);
-                             $cur = $mydb->loadResultList(); 
-                                foreach ($cur as $result) { 
-                                  echo '<option value='.$result->NumberPerson.'>'.$result->NumberPerson.'</option>';
-                                }
-
-                            ?>
                     </select>
                   </div>
                   
