@@ -155,9 +155,9 @@
                   
 
                   <div class="custom-select">
-                    <select  name="person" id="person">
+                    <input  name="person" id="person">
                     <option type="text" oninput="add_number();"> </option>
-                    </select>
+                    </input>
                   </div>
 
                   <div class="custom-select">
