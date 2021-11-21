@@ -376,6 +376,9 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
 
  
                 ?>
+                <br></br>
+                <br></br>
+                <br></br>
                  <form method="POST" action="index.php?p=accomodation">
                  <input type="hidden" name="ROOMPRICE" value="<?php echo $result->PRICE ;?>">
                   <input type="hidden" name="ROOMID" value="<?php echo $result->ROOMID ;?>">
