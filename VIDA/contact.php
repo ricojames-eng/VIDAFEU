@@ -162,10 +162,19 @@
             <div class="section_title text-center">
                 <h1>Contact Us</h1>
               <div>VIDA INTERNATIONAL</div>
-              <h1>PLEASE LEAVE A MESSAGE</h1>
+              <h1>For room reservations at Vida Downtown, Manzil Downtown, Vida Emirates Hills and Vida Creek Harbour please book online www.vidahotels.com/en/ or email stay@vidahotels.com.
+You may also contact us on any of the toll free or international direct dial numbers below:</h1>
+              <h1>Kingdom of Saudi Arabia: 8008971470</h1>
+              <h1>South Africa: 0800991720</h1>
+              <h1>India: 0008009713005</h1>
+              <h1>Japan: 00531930005</h1>
+              <h1>China: 4008424100</h1>
+              <h1>UNITED STATES OF AMERICA:
+18443980614</h1>
+
             </div>
             <div class="contact_text text-center">
-              <p>DESCRIPTION FOR INFORMATION</p>
+              <p></p>
             </div>
             <div class="contact_form_container">
               <form action="#" class="contact_form text-center">   
