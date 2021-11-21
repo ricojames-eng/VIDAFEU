@@ -266,7 +266,7 @@
               </div>
               <!-- Slide -->
               <div class="slide">
-                <div class="background_image" style="background-image:url(images/golfroom_3.png)"></div>
+                <div class="background_image" style="background-image:url(images/golfroom_3.jpg)"></div>
               </div>       
             </div>
           </div>
@@ -313,7 +313,7 @@
         <div class="slide">
           <div class="background_image" style="background-image:url(images/discover_1.jpg)"></div>
           <div class="discover_overlay d-flex flex-column align-items-center justify-content-center">
-            <h1><a href="#">Luxurious Rooms</a></h1>
+            <h1><a href="#">Exciting Events</a></h1>
           </div>
         </div>
         <!-- Slide -->
