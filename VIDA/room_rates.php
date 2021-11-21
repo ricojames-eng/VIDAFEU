@@ -197,7 +197,7 @@
                     <input  name="person" id="person" oninput="add_number();">
                     <option type="text"> </option>
                     </input>
-                  </div>
+         
 
                 </div>
                 <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
