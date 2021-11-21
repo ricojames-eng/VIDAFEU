@@ -155,9 +155,9 @@
                   
 
                   <div>
-                      <input name="person" id="input1" type="number" min="0" oninput="this.value = Math.abs(this.value)"> </input>
-                      <input name="person" id="input2" type="number" min="0" oninput="this.value = Math.abs(this.value)"> </input>
-                      <input name="person" id="person" type="number" min="0" oninput="this.value = Math.abs(this.value)"> </input>
+                      <input name="Adult" id="input1" type="number" min="0" oninput="this.value = Math.abs(this.value) value="0"> </input>
+                      <input name="Children" id="input2" type="number" min="0" oninput="this.value = Math.abs(this.value)" value="0"> </input>
+                      <input id="person" name="person" size="5"/>
                   </div>
                   
 
@@ -423,9 +423,4 @@ var do_calcul = function() {
     result = num1 + num2;
     document.getElementById("person").value = result;
 };
-
-var signs_buttons = document.getElementsByClassName("sign");
-for(var i=0;i<signs_buttons.length;i++){
-    signs_buttons[i].addEventListener('click', do_calcul, false);
-}
 </script>
