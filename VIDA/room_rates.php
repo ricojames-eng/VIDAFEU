@@ -153,16 +153,14 @@
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Check in" name="arrival" required="required" value="<?php echo isset($_POST['arrival']) ? $_POST['arrival'] :date('m/d/Y');?>"></div>
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
                   
-
+                  <!-- PERSON -- >
                   <div class="custom-select">
-                    <select>
-                      <input type="text" id="person" name="person" oninput="add_number()"> </input>
+                    <select name="person" id="person">
                       <input type="text" id="Text1" name="TextBox1" oninput="add_number()"> </input>
                       <input type="text" id="Text2" name="TextBox2" oninput="add_number()"> </input>
                     </select>
                   </div>
-                
-                  
+                  <!-- PERSON -- >
 
                   <div class="custom-select">
                           <?php
