@@ -74,11 +74,7 @@
   padding-left: 0px;
   padding-right: 0px;
 }
-.booking_form_inputs
-{
-  width: calc(100% - 286px);
-  height: 65px;
-}
+
 </style>
 
 <div class="discover_slider_container2">
