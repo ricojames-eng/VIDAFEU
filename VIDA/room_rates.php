@@ -152,6 +152,8 @@
                 <div class="booking_form_inputs d-flex flex-row align-items-start justify-content-between flex-wrap">
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Check in" name="arrival" required="required" value="<?php echo isset($_POST['arrival']) ? $_POST['arrival'] :date('m/d/Y');?>"></div>
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
+                  
+                  
                   <div class="custom-select">
                     <select name="person" id="person">
                       <option value="0">Adult - Child</option>
@@ -165,6 +167,8 @@
                             ?>
                     </select>
                   </div>
+                  
+
                   <div class="custom-select">
                           <?php
                          $accomodation = New Accomodation();
@@ -419,3 +423,13 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
           </div>
  </div>
 
+<script>
+ function add_number() {
+               
+                var first_number = parseInt(document.getElementById("Text1").value);
+                var second_number = parseInt(document.getElementById("Text2").value);
+                var result = first_number + second_number;
+     
+                document.getElementById("person").value = result;
+            }
+</script>
