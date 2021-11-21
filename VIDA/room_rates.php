@@ -60,6 +60,33 @@
   box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
   filter: blur(10px);
   margin: -20px;
+
+
+  span {cursor:pointer; }
+    .number{
+      margin:100px;
+    }
+    .minus, .plus{
+      width:20px;
+      height:20px;
+      background:#f2f2f2;
+      border-radius:4px;
+      padding:8px 5px 8px 5px;
+      border:1px solid #ddd;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+    }
+    input{
+      height:34px;
+      width: 100px;
+      text-align: center;
+      font-size: 26px;
+      border:1px solid #ddd;
+      border-radius:4px;
+      display: inline-block;
+      vertical-align: middle;
+    }
 }
 </style>
 
@@ -152,20 +179,18 @@
                 <div class="booking_form_inputs d-flex flex-row align-items-start justify-content-between flex-wrap">
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Check in" name="arrival" required="required" value="<?php echo isset($_POST['arrival']) ? $_POST['arrival'] :date('m/d/Y');?>"></div>
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
+                  
                   <!-- SELECT PERSONS -->
-                  <div class="custom-select">
-                    <select name="person" id="person">
-                      <option value="0">Adult - Child</option>       
-                      <?php $sql ="SELECT distinct(`NUMPERSON`) as 'NumberPerson' FROM `tblroom`";
-                               $mydb->setQuery($sql);
-                             $cur = $mydb->loadResultList(); 
-                                foreach ($cur as $result) { 
-                                  echo '<option value='.$result->NumberPerson.'>'.$result->NumberPerson.'</option>';
-                                }
-
-                            ?> 
-                    </select>
-                  </div>
+                  <div class="custom-select"> <!-- DIV START -->
+                    <select name="person" id="person"> <!-- SELECT START -->
+                      <div class="number">
+                        <span class="minus">-</span>
+                        <input type="text" value="1"/>
+                        <span class="plus">+</span>
+                      </div>
+                    </select> <!-- SELECT END -->
+                  </div> <!-- END START -->
+                  
                   <!-- SELECT PERSONS -->
                   <div class="custom-select">
                           <?php
@@ -421,3 +446,23 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
           </div>
  </div>
 
+
+<script>
+ $(document).ready(function() {
+      $('.minus').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+      });
+      $('.plus').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+      });
+    });
+</script>
+ 
