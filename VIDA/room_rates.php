@@ -155,10 +155,13 @@
                   
 
                   <div class="custom-select">
-       
-                    <input type="text" id="person" name="person" oninput="add_number();"/>
-                    <input type="text" name="TextBox1" id="Text1" oninput="add_number();"/>
-                    <input type="text" name="TextBox2" id="Text2" oninput="add_number();"/>
+                    
+                    <select>
+                        <input type="text" id="person" name="person" oninput="add_number();"/>
+                        <input type="text" name="TextBox1" id="Text1" oninput="add_number();"/>
+                        <input type="text" name="TextBox2" id="Text2" oninput="add_number();"/>
+                    </select>
+
                   </div>
                   
                 </div>
