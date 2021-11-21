@@ -163,16 +163,14 @@
                   </div>
 
                   <div class="custom-select2">
+                    <a>Adult (12+)</a>
                     <input  name="TextBox1" id="Text1" oninput="add_number();">
-                    <option type="text"> </option>
                     </input>
 
                     <input  name="TextBox2" id="Text2" oninput="add_number();">
-                    <option type="text"> </option>
                     </input>
 
                     <input  name="person" id="person" oninput="add_number();">
-                    <option type="text"> </option>
                     </input>
                     </div>
 
@@ -376,9 +374,6 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
 
  
                 ?>
-                <br></br>
-                <br></br>
-                <br></br>
                  <form method="POST" action="index.php?p=accomodation">
                  <input type="hidden" name="ROOMPRICE" value="<?php echo $result->PRICE ;?>">
                   <input type="hidden" name="ROOMID" value="<?php echo $result->ROOMID ;?>">
