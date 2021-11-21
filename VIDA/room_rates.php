@@ -76,7 +76,7 @@
 }
 .booking_form_inputs
 {
-  width: calc(100% - 230px);
+  width: calc(100% - 500px);
   height: 65px;
 }
 </style>
