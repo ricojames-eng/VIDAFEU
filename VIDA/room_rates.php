@@ -155,23 +155,13 @@
                  
 
                   <div class="custom-select">
-                    <form>
-                      <p>input 1:
-                        <input type="text" id="input1" size="5"/>
-                      </p>
-                      <br/>
-
-                      <p>input 2:
-                        <input type="text" id="input2" size="5"/>
-                      </p>
-                      <br/>
-
-                      <input type="button" value="+" onclick="myFunction()">
-
-                      <p id="answer"></p>
-                    </form>
+                   <!-- <select name="person" id="person"> -->
+                    <input type="number" id="id-1" />
+                    <input type="number" id="id-2" />
+                    <input type="number" id="id-3" readonly />
+                     
                   </div>
-                 
+                  
 
                   <div class="custom-select">
                           <?php
@@ -426,11 +416,12 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
               </div> 
           </div>
  </div>
-
 <script>
-function myFunction() {
-  var num1 = parseFloat(document.getElementById("input1").value);
-  var num2 = parseFloat(document.getElementById("input2").value);
-  document.getElementById("answer").innerHTML = num1 + num2;
-}
+
+$(function () {
+  $("#id-1, #id-2").keyup(function () {
+    $("#id-3").val(+$("#id-1").val() + +$("#id-2").val());
+  });
+});
+
 </script>
