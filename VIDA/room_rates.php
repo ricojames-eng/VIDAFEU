@@ -71,8 +71,8 @@
   width: 100%;
   background: #ffffff;
   margin-top: -110px;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 43px;
+  padding-right: 43px;
 }
 .booking_form_inputs
 {
@@ -187,7 +187,9 @@
                     <input  name="TextBox1" id="Text1" oninput="add_number();">
                     <option type="text"> </option>
                     </input>
+                    </div>
 
+                    <div class="custom-select">
                     <input  name="TextBox2" id="Text2" oninput="add_number();">
                     <option type="text"> </option>
                     </input>
@@ -198,7 +200,7 @@
                     <option type="text"> </option>
                     </input>
                   </div>
-                  </div>
+
                 </div>
                 <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
               </div>
