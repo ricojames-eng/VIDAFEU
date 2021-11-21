@@ -38,7 +38,7 @@
                     </select>
                   </div>
                 </div>
-                <center><a>AVAILABILITY</a></center>
+              
                 <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
               </div>
             </form>
@@ -48,6 +48,10 @@
     </div>
   </div>
 <br></br>
+<br></br>
+<br></br>
+<br></br>
+
 <?php
 $msg = "";
 
