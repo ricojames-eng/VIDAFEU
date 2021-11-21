@@ -164,15 +164,13 @@
                     <input  name="TextBox1" id="Text1">
                     <option type="text" oninput="add_number();"> </option>
                     </input>
-                  </div>
 
-                  <div class="custom-select">
-                     <input  name="TextBox2" id="Text2">
+                    <input  name="TextBox2" id="Text2">
                     <option type="text" oninput="add_number();"> </option>
                     </input>
-                  </div>  
-              
-                
+                  </div>
+
+                       
                   <div class="custom-select">
                           <?php
                          $accomodation = New Accomodation();
