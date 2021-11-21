@@ -158,10 +158,10 @@
                     <!-- <select name="person" id="person"> -->
                     <input type="text" id="val1">
                     <input type="text" id="val2">
-                    <input type="button" value="Calculate" onclick="calculate();">
+                   
                     
                   </div>
-                  
+                   <input type="button" value="Calculate" onclick="calculate();">
 
                   <div class="custom-select">
                           <?php
