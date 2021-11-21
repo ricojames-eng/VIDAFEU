@@ -169,10 +169,10 @@
                   
                   <div class="custom-select2">
                     <center><a>Adult (12+)</a></center>
-                    <input  name="TextBox1" id="Text1" oninput="add_number();">
+                    <input  type="number" name="TextBox1" id="Text1" oninput="add_number();">
                     </input>
                      <center><a>Children (4 ~ 11)</a></center>
-                    <input  name="TextBox2" id="Text2" oninput="add_number();">
+                    <input  type="number" name="TextBox2" id="Text2" oninput="add_number();">
                     </input>
                     <center><a>Total Persons</a></center>
                     <input  name="person" id="person" oninput="add_number();">
