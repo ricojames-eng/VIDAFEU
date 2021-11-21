@@ -155,18 +155,18 @@
                   
 
                   <div class="custom-select">
-                    <input  name="person" id="person">
-                    <option type="text" oninput="add_number();"> </option>
+                    <input  name="person" id="person" oninput="add_number();">
+                    <option type="text"> </option>
                     </input>
                   </div>
 
                   <div class="custom-select">
-                    <input  name="TextBox1" id="Text1">
-                    <option type="text" oninput="add_number();"> </option>
+                    <input  name="TextBox1" id="Text1" oninput="add_number();">
+                    <option type="text"> </option>
                     </input>
 
-                    <input  name="TextBox2" id="Text2">
-                    <option type="text" oninput="add_number();"> </option>
+                    <input  name="TextBox2" id="Text2" oninput="add_number();">
+                    <option type="text"> </option>
                     </input>
                   </div>
 
