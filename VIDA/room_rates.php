@@ -155,11 +155,11 @@
                  
 
                   <div class="custom-select">
-                   <!-- <select name="person" id="person"> -->
-                    <input type="number" id="id-1" />
-                    <input type="number" id="id-2" />
-                    <input type="number" id="id-3" readonly />
-                     
+                    <!-- <select name="person" id="person"> -->
+                    <input type="text" id="val1">
+                    <input type="text" id="val2">
+                    <input type="button" value="Calculate" onclick="calculate();">
+                    
                   </div>
                   
 
@@ -417,11 +417,12 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
           </div>
  </div>
 <script>
+function calculate(){
+var val1 = document.getElementById('val1').value;
+var val2 = document.getElementById('val2').value;
+var res = (parseFloat(val1)+parseFloat(val2))
 
-$(function () {
-  $("#id-1, #id-2").keyup(function () {
-    $("#id-3").val(+$("#id-1").val() + +$("#id-2").val());
-  });
-});
+alert(res);
 
+}
 </script>
