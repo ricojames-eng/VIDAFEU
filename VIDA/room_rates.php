@@ -156,6 +156,14 @@
 
                   <div>
                       <input name="person" id="person" type="number" min="0" oninput="this.value = Math.abs(this.value)"> </input>
+                      <p>input 1: <input id="input1" size="5"/></p><br>
+
+                      <p>input 2: <input id="input2" size="5"/></p><br>
+
+                      <button class="sign" id="add">+</button>
+                      <button class="sign" id="substract">-</button>
+
+                      <p>Answer:<input id="output1" size="5"/></p>
                   </div>
                   
 
@@ -413,3 +421,22 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
           </div>
  </div>
 
+<script>
+var do_calcul = function() {
+    var num1 = Number(document.getElementById("input1").value);
+    var num2 = Number(document.getElementById("input2").value);
+    var result;
+
+    if (this.id == "add") {
+        result = num1 + num2;
+    } else if (this.id == "substract") {
+        result = num1 - num2;
+    }
+    document.getElementById("output1").value = result;
+};
+
+var signs_buttons = document.getElementsByClassName("sign");
+for(var i=0;i<signs_buttons.length;i++){
+    signs_buttons[i].addEventListener('click', do_calcul, false);
+}
+</script>
