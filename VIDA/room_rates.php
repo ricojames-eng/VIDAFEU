@@ -241,7 +241,7 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
 
 
  
- $query = "SELECT * FROM `tblroom` r ,`tblaccomodation` a WHERE r.`ACCOMID`=a.`ACCOMID`   AND `NUMPERSON` = " . $_POST['person'];
+ $query = "SELECT * FROM `tblroom` r ,`tblaccomodation` a WHERE r.`ACCOMID`=a.`ACCOMID`   AND `NUMPERSON` = " . $_POST['person2'];
     
 
 }elseif(isset($_GET['q'])){
@@ -380,7 +380,7 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
 
  
                 ?>
-                 <form method="POST" action="index.php?p=accomodation">
+                  <form method="POST" action="index.php?p=accomodation">
                  <input type="hidden" name="ROOMPRICE" value="<?php echo $result->PRICE ;?>">
                   <input type="hidden" name="ROOMID" value="<?php echo $result->ROOMID ;?>">
 
@@ -407,7 +407,6 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
                            <?php echo $btn ; ?> 
                         </div>
                       </div>
-
                   
 
                   </form>
