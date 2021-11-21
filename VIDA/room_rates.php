@@ -157,6 +157,7 @@
                   <div class="custom-select">
                     <select <input type="number" min="0" name="person" id="person">
                       <option value="0">Persons</option>
+                      <input type="number" id="number" min="0" />
                     </select>
                   </div>
                   
@@ -414,4 +415,20 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
               </div> 
           </div>
  </div>
+
+ <script>
+
+// Select your input element.
+var number = document.getElementById('number');
+
+// Listen for input event on numInput.
+number.onkeydown = function(e) {
+    if(!((e.keyCode > 95 && e.keyCode < 106)
+      || (e.keyCode > 47 && e.keyCode < 58) 
+      || e.keyCode == 8)) {
+        return false;
+    }
+}
+
+ </script>
 
