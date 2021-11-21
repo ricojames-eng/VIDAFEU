@@ -60,33 +60,6 @@
   box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
   filter: blur(10px);
   margin: -20px;
-
-
-  span {cursor:pointer; }
-    .number{
-      margin:100px;
-    }
-    .minus, .plus{
-      width:20px;
-      height:20px;
-      background:#f2f2f2;
-      border-radius:4px;
-      padding:8px 5px 8px 5px;
-      border:1px solid #ddd;
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-    }
-    input{
-      height:34px;
-      width: 100px;
-      text-align: center;
-      font-size: 26px;
-      border:1px solid #ddd;
-      border-radius:4px;
-      display: inline-block;
-      vertical-align: middle;
-    }
 }
 </style>
 
@@ -183,11 +156,7 @@
                   <!-- SELECT PERSONS -->
                   <div class="custom-select"> <!-- DIV START -->
                     <select name="person" id="person"> <!-- SELECT START -->
-                      <div class="number">
-                        <span class="minus">-</span>
-                        <input type="text" value="1"/>
-                        <span class="plus">+</span>
-                      </div>
+                      <option value="0">Adult - Child</option>       
                     </select> <!-- SELECT END -->
                   </div> <!-- END START -->
                   
@@ -446,23 +415,3 @@ $_SESSION['departure'] =date_format(date_create($_POST['departure']),"Y-m-d");
           </div>
  </div>
 
-
-<script>
- $(document).ready(function() {
-      $('.minus').click(function () {
-        var $input = $(this).parent().find('input');
-        var count = parseInt($input.val()) - 1;
-        count = count < 1 ? 1 : count;
-        $input.val(count);
-        $input.change();
-        return false;
-      });
-      $('.plus').click(function () {
-        var $input = $(this).parent().find('input');
-        $input.val(parseInt($input.val()) + 1);
-        $input.change();
-        return false;
-      });
-    });
-</script>
- 
