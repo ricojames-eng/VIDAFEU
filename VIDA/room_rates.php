@@ -37,15 +37,15 @@
 }
 
 .glass-container {
-    width: 100%;
-  height: 55rem;
+  width: 100%;
+  height: 40rem;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
   border-radius: 5px;
   position: relative;
   z-index: 1;
   background: inherit;
   overflow: hidden;
-  top: -260px;
+  top: -250px;
 }
 
 .glass-container:before {
@@ -70,29 +70,7 @@
             <div class="owl-carousel owl-theme gallery_slider">           
               <!-- Slide -->
               <div class="gallery_slide">
-                <img src="images/golfroom1.jpg" alt="">
-                <div class="gallery_overlay">
-                  <div class="text-center d-flex flex-column align-items-center justify-content-center">
-                    <a href="#">
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Slide -->
-              <div class="gallery_slide">
-                <img src="images/golfroom2.jpg" alt="">
-                <div class="gallery_overlay">
-                  <div class="text-center d-flex flex-column align-items-center justify-content-center">
-                    <a href="#">
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Slide -->
-              <div class="gallery_slide">
-                <img src="images/golfroom3.jpg" alt="">
+                <img src="images/golfroom_1.jpg" alt="">
                 <div class="gallery_overlay">
                   <div class="text-center d-flex flex-column align-items-center justify-content-center">
                     <a href="#">
@@ -122,11 +100,29 @@
                   </div>
                 </div>
               </div>
-
-
+<!-- Slide -->
+              <div class="gallery_slide">
+                <img src="images/golfroom1.jpg" alt="">
+                <div class="gallery_overlay">
+                  <div class="text-center d-flex flex-column align-items-center justify-content-center">
+                    <a href="#">
+                    </a>
+                  </div>
+                </div>
+              </div>
               <!-- Slide -->
               <div class="gallery_slide">
-                <img src="images/golfroom_1.jpg" alt="">
+                <img src="images/golfroom3.jpg" alt="">
+                <div class="gallery_overlay">
+                  <div class="text-center d-flex flex-column align-items-center justify-content-center">
+                    <a href="#">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide -->
+              <div class="gallery_slide">
+                <img src="images/golfroom2.jpg" alt="">
                 <div class="gallery_overlay">
                   <div class="text-center d-flex flex-column align-items-center justify-content-center">
                     <a href="#">
