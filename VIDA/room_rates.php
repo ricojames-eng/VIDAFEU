@@ -61,6 +61,23 @@
   filter: blur(10px);
   margin: -20px;
 }
+
+.booking_form_button
+{
+  width: 280px;
+  height: 65px;
+  background: #ff9000;
+  margin-left: 9px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  cursor: pointer;
+  top: -10px;
+}
 </style>
 
 <div class="discover_slider_container2">
