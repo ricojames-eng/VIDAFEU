@@ -158,9 +158,14 @@
                     <select  name="person" id="person">
                     <option type="text" oninput="add_number();"> </option>
                     </select>
-                    
-                    <input type="text" name="TextBox1" id="Text1" oninput="add_number();"/>
-                    <input type="text" name="TextBox2" id="Text2" oninput="add_number();"/>  
+
+                    <select  name="TextBox1" id="Text1">
+                    <option type="text" oninput="add_number();"> </option>
+                    </select>
+
+                     <select  name="TextBox2" id="Text2">
+                    <option type="text" oninput="add_number();"> </option>
+                    </select>
                   </div>
                   </div>
                 
