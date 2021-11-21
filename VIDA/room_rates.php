@@ -167,7 +167,7 @@
                          $accomodation = New Accomodation();
                          $cur = $accomodation->listOfaccomodation(); 
                           ?>
-                    <select  name="accomodation" id="person2">
+                    <select  name="accomodation" id="person">
                       <option value="0">Room Type</option>
                       <?php  foreach ($cur as $result) { ?>
                           <option value="<?php echo $result->ACCOMODATION; ?>"><?php echo $result->ACCOMODATION; ?></option>
@@ -175,7 +175,7 @@
                     </select>
                   </div>
                 </div>
-                <center><a>SEARCH BUTTON</a></center>
+                <center><a></a></center>
                 <button class="booking_form_button ml-lg-auto">FIND A ROOM</button>
               </div>
             </form>
