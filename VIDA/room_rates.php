@@ -154,8 +154,7 @@
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
                   
                   <div class="custom-select">
-                    <input type="text" name="TextBox1" id="Text1" oninput="add_number();">
-                    </input>
+                    <input type="text" name="TextBox1" id="Text1" oninput="add_number();"/>
                   </div>
 
                   <div class="custom-select">
