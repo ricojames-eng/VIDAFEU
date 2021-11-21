@@ -152,19 +152,14 @@
                 <div class="booking_form_inputs d-flex flex-row align-items-start justify-content-between flex-wrap">
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Check in" name="arrival" required="required" value="<?php echo isset($_POST['arrival']) ? $_POST['arrival'] :date('m/d/Y');?>"></div>
                   <div class="booking_dropdown"><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
+                  <!-- SELECT PERSONS -->
                   <div class="custom-select">
                     <select name="person" id="person">
                       <option value="0">Adult - Child</option>       
-                      <?php $sql ="SELECT distinct(`NUMPERSON`) as 'NumberPerson' FROM `tblroom`";
-                               $mydb->setQuery($sql);
-                             $cur = $mydb->loadResultList(); 
-                                foreach ($cur as $result) { 
-                                  echo '<option value='.$result->NumberPerson.'>'.$result->NumberPerson.'</option>';
-                                }
-
-                            ?> 
+                      <input id="person" type="number" name="Adult" min="0" step="1">
                     </select>
                   </div>
+                  <!-- SELECT PERSONS -->
                   <div class="custom-select">
                           <?php
                          $accomodation = New Accomodation();
