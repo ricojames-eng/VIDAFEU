@@ -19,6 +19,7 @@
 <td width="80"><strong>Total Price</strong></td>
 <!-- <td width="80"><strong>Nights</strong></td> -->
 <td width="80"><strong>Status</strong></td>
+<td width="80"><strong>Amenities</strong></td>
 <td width="150"><strong>Action</strong></td>
 </tr>
 </thead>
