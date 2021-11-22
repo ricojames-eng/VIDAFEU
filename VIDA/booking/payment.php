@@ -213,8 +213,14 @@ $_SESSION['GUESTID'] =   $lastguest;
   </div> 
   <br/>
 
-
-
+<div class="custom-select">
+    <center><a>ADDITIONAL AMENITIES</a></center>
+    <select  name="amenities" id="amenities">
+      <option value="0">FREE BREAKFAST</option>
+      <option value="1">FREE LUNCH</option>
+      <option value="2">FREE DINNER</option>
+    </select>
+</div>
 
 <div class="row">
   <div class="table-responsive">
@@ -254,7 +260,6 @@ for ($i=0; $i < $count_cart  ; $i++) {
           <td><?php echo  ' ₱ '. $result->PRICE; ?></td>
           <td><?php echo   $_SESSION['feuhotel_cart'][$i]['feuhotelday']; ?></td>
           <td><?php echo ' ₱ '.   $_SESSION['feuhotel_cart'][$i]['feuhotelroomprice']; ?></td>
-          <input name="amenity" id="amenity">N/A</input>
         </tr>
 <?php
        $payable += $_SESSION['feuhotel_cart'][$i]['feuhotelroomprice'] ;  
