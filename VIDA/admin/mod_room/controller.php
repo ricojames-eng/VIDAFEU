@@ -84,7 +84,7 @@ function doInsert(){
 						@$RateXtraKid =	$_POST['RATEXTRAKID'];
 
 						global $mydb;
-					 	$sql = "INSERT INTO tblroom (ROOMNUM, ACCOMID, ROOM, ROOMDESC, NUMPERSON, PRICE, ROOMIMAGE, OROOMNUM, RoomTypeID, RateType, SeasonName, Amenities, RateXtraAdult, RateXtraKid) VALUES ('$ROOMNUM','$ACCOMID','$ROOM','$ROOMDESC','$NUMPERSON','$PRICE','rooms/$image_name','$OROOMNUM','0','$RateType','$SeasonName','$Amenities','$RateXtraAdult','$RateXtraKid')";  // Booking_id = GUEST NUMBER;
+					 	$sql = "INSERT INTO tblroom (ROOMNUM, ACCOMID, ROOM, ROOMDESC, NUMPERSON, PRICE, ROOMIMAGE, OROOMNUM, RoomTypeID, RateType, SeasonName, Amenities, RateXtraAdult, RateXtraKid) VALUES ('$ROOMNUM','$ACCOMID','$ROOM','$ROOMDESC','$NUMPERSON','$PRICE','$image_name','$OROOMNUM','0','$RateType','$SeasonName','$Amenities','$RateXtraAdult','$RateXtraKid')";  // Booking_id = GUEST NUMBER;
       					$mydb->setQuery($sql);
       					$mydb->executeQuery(); 
 
