@@ -254,7 +254,7 @@ for ($i=0; $i < $count_cart  ; $i++) {
           <td><?php echo  ' ₱ '. $result->PRICE; ?></td>
           <td><?php echo   $_SESSION['feuhotel_cart'][$i]['feuhotelday']; ?></td>
           <td><?php echo ' ₱ '.   $_SESSION['feuhotel_cart'][$i]['feuhotelroomprice']; ?></td>
-          <td><input name="amenity" id="amenity">N/A</td>
+          <input name="amenity" id="amenity">
         </tr>
 <?php
        $payable += $_SESSION['feuhotel_cart'][$i]['feuhotelroomprice'] ;  
