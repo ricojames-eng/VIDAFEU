@@ -134,7 +134,9 @@ $_SESSION['GUESTID'] =   $lastguest;
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
 
-      $sql = "INSERT INTO tblreservation (CONFIRMATIONCODE, TRANSDATE, ROOMID, ARRIVAL, DEPARTURE, RPRICE, GUESTID, PRORPOSE, STATUS, BOOKDATE, REMARKS, USERID) VALUES ('$CONFIRM','$A','$B','$C','$D','$E','$F','$G','$H','$A','NONE','$GUESTNUM')";
+      @$REMARKSAM = $_POST['amenities'];
+
+      $sql = "INSERT INTO tblreservation (CONFIRMATIONCODE, TRANSDATE, ROOMID, ARRIVAL, DEPARTURE, RPRICE, GUESTID, PRORPOSE, STATUS, BOOKDATE, REMARKS, USERID) VALUES ('$CONFIRM','$A','$B','$C','$D','$E','$F','$G','$H','$A','$REMARKSAM','$GUESTNUM')";
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
 
