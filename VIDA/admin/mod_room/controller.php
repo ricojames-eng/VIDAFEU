@@ -40,7 +40,7 @@ function doInsert(){
 				if(isset($_FILES['image']) && !empty($_FILES['image']['tmp_name'])){
 						$file=$_FILES['image']['tmp_name'];
 						$image= $_FILES['image']['tmp_name'];
-						$image_name= date('YmdHi').'_'.addslashes($_FILES['image']['name']);
+						$image_name= $_FILES['image']['name'];
 						$image_size= getimagesize($_FILES['image']['tmp_name']);
 						
 						if ($image_size==FALSE) {
