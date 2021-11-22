@@ -134,7 +134,9 @@ $_SESSION['GUESTID'] =   $lastguest;
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
 
-      $sql = "INSERT INTO tblreservation (CONFIRMATIONCODE, TRANSDATE, ROOMID, ARRIVAL, DEPARTURE, RPRICE, GUESTID, PRORPOSE, STATUS, BOOKDATE, REMARKS, USERID) VALUES ('$CONFIRM','$A','$B','$C','$D','$E','$F','$G','$H','$A','NONE','$GUESTNUM')";
+      @$REMARKSAM = $_POST['amenities'];
+
+      $sql = "INSERT INTO tblreservation (CONFIRMATIONCODE, TRANSDATE, ROOMID, ARRIVAL, DEPARTURE, RPRICE, GUESTID, PRORPOSE, STATUS, BOOKDATE, REMARKS, USERID) VALUES ('$CONFIRM','$A','$B','$C','$D','$E','$F','$G','$H','$A','$REMARKSAM','$GUESTNUM')";
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
 
@@ -216,14 +218,14 @@ $_SESSION['GUESTID'] =   $lastguest;
 <div class="custom-select">
     <center><a>ADDITIONAL AMENITIES</a></center>
     <select type="text" name="amenities" id="amenities">
-      <option value="0">FREE BREAKFAST</option>
-      <option value="1">FREE LUNCH</option>
-      <option value="2">FREE DINNER</option>
-      <option value="3">ADDITIONAL 1 BED</option>
-      <option value="4">GYM ACCESS</option>
-      <option value="5">POOL ACCESS</option>
-      <option value="5">GOLF ACCESS</option>
-      <option value="5">TOILETRIES</option>
+      <option value="FREE BREAKFAST">ADD FREE BREAKFAST</option>
+      <option value="FREE LUNCH">ADD FREE LUNCH</option>
+      <option value="FREE DINNER">ADD FREE DINNER</option>
+      <option value="EXTRA 1 BED">ADD 1 EXTRA BED</option>
+      <option value="GYM ACCESS">ADD GYM ACCESS</option>
+      <option value="POOL ACCESS">ADD POOL ACCESS</option>
+      <option value="GOLF ACCESS">ADD GOLF ACCESS</option>
+      <option value="TOILETRIES">ADD TOILETRIES</option>
     </select>
 </div>
 
