@@ -222,8 +222,7 @@ $_SESSION['GUESTID'] =   $lastguest;
       <option value="3">ADDITIONAL 1 BED</option>
       <option value="4">GYM ACCESS</option>
       <option value="5">POOL ACCESS</option>
-      <option value="6">ACTIVITIES ACCESS</option>
-      <option value="7">BEVERAGES</option>
+      <input type="text" name="amenities" id="amenities"> OTHERS </input>
     </select>
 </div>
 
