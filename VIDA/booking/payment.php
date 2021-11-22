@@ -215,13 +215,21 @@ $_SESSION['GUESTID'] =   $lastguest;
 
 <div class="custom-select">
     <center><a>ADDITIONAL AMENITIES</a></center>
-    <select  name="amenities" id="amenities">
+    <select type="text" name="amenities" id="amenities">
       <option value="0">FREE BREAKFAST</option>
       <option value="1">FREE LUNCH</option>
       <option value="2">FREE DINNER</option>
+      <option value="3">ADDITIONAL 1 BED</option>
+      <option value="4">GYM ACCESS</option>
+      <option value="5">POOL ACCESS</option>
+      <option value="6">ACTIVITIES ACCESS</option>
+      <option value="7">BEVERAGES</option>
     </select>
 </div>
 
+<br></br>
+<br></br>
+<br></br>
 <div class="row">
   <div class="table-responsive">
     <table class="table">
