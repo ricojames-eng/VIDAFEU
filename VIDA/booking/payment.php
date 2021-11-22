@@ -272,8 +272,11 @@ for ($i=0; $i < $count_cart  ; $i++) {
     <div class="right"> 
       <h3 style="text-align: right;">Total: ₱  <?php echo $payable ;?></h3>
     </div>
-    
-
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
   <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=PHP" data-sdk-integration-source="button-factory"></script>
   <script>
     function initPayPalButton() {
