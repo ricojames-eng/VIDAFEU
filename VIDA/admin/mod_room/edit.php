@@ -89,19 +89,17 @@ $result = $rm->single_room($_GET['id']);
             </div>
           </div>
 
-          <!--   <div class="form-group">
+          <div class="form-group">
             <div class="col-md-8">
               <label class="col-md-4 control-label" for=
-              "ROOMNUM">No. of Rooms:</label>
-
+              "ROOMNUM">ROOM AVAILABILITY COUNTS:</label>
               <div class="col-md-8">
-                <input name="" type="hidden" value=""> -->
                  <input class="form-control input-sm" id="ROOMNUM" name="ROOMNUM" placeholder=
-                    "Room #" type="hidden" value="<?php echo $result->ROOMNUM; ?>">
-           <!--    </div>
+                    "Room #" type="text" value="<?php echo $result->ROOMNUM; ?>">
+              </div>
             </div>
           </div>
-         -->
+         
          <div class="form-group">
             <div class="col-md-8">
               <label class="col-md-4 control-label" for=
