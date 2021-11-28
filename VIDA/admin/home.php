@@ -72,7 +72,7 @@
     </div>
     <div id="collapseseven" class="panel-collapse collapse">
       <div class="panel-body">
-        The system displays the list of all bookings that have been carried in to the system. Click <a href="mod_users/index.php">HERE.</a>
+        The system displays the list of all bookings that have been carried in to the system. Click <a href="mod_booking/index.php">HERE.</a>
       </div>
     </div>
   </div>
