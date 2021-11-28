@@ -60,6 +60,22 @@
       </div>
     </div>
   </div>
+
+   <!-- NOV 29 NEW UPDATE ADDED -->
+ <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseseven">
+          Booking Management
+        </a>
+      </h4>
+    </div>
+    <div id="collapseseven" class="panel-collapse collapse">
+      <div class="panel-body">
+        The system displays the list of all bookings that have been carried in to the system. Click <a href="mod_users/index.php">HERE.</a>
+      </div>
+    </div>
+  </div>
  
  <?php } ?>
 </div>
