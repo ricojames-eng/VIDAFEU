@@ -6,7 +6,7 @@
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-          Rooms
+          Rooms Management
         </a>
       </h4>
     </div>
@@ -21,7 +21,7 @@
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-          Accomodation
+          Accomodation Management
         </a>
       </h4>
     </div>
@@ -34,7 +34,7 @@
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-          Reservation
+          Reservation Management
         </a>
       </h4>
     </div>
@@ -50,7 +50,7 @@
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapsesix">
-          Users
+          Admin Management
         </a>
       </h4>
     </div>
