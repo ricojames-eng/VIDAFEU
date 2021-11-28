@@ -1,5 +1,17 @@
 
 <div class="container">
+
+		  		<!-- TRANSFER VALUE FROM THIS PAGE TO ANOTHER PAGE -->
+	  		<center><H>DISPLAY GUEST BOOKINGS INFORMATIONS</H></center>
+	  		<center>
+	  		<form method="post" action="index.php?view=find"> <!-- transfer the input text to find.php -->
+	  			<H>INPUT GUEST ID</H>
+			    <input type="number" name="txt" />
+			    <input type="submit" class="btn btn-primary"/>
+			</form>
+			</center>
+			<!-- TRANSFER VALUE FROM THIS PAGE TO ANOTHER PAGE -->
+
 		<!-- <div class="panel panel-primary"> -->
 			<div class="panel-body">
 				<br></br>
@@ -47,19 +59,6 @@
 	  		</div><!--End of Panel Body-->
 	  		 	<!-- </div> -->
 	  	<!--End of Main Panel-->
-
-
-	  		<!-- TRANSFER VALUE FROM THIS PAGE TO ANOTHER PAGE -->
-	  		<center><H>DISPLAY GUEST BOOKINGS INFORMATIONS</H></center>
-	  		<center>
-	  		<form method="post" action="index.php?view=find"> <!-- transfer the input text to find.php -->
-	  			<H>INPUT GUEST ID</H>
-			    <input type="number" name="txt" />
-			    <input type="submit" class="btn btn-primary"/>
-			</form>
-			</center>
-			<!-- TRANSFER VALUE FROM THIS PAGE TO ANOTHER PAGE -->
-
 
 </div><!--End of container-->
 <div class="modal fade" id="myModal" tabindex="-1">
