@@ -190,6 +190,15 @@ $(document).ready(function() {
 	            <?php if($_SESSION['ADMIN_UROLE']=="Administrator"){ ?>
 	             <li class="<?php echo (currentpage() == 'mod_users') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_users/index.php" >Users</a></li>
 	             <?php } ?>
+
+
+	             <!-- NOV 29 2021 UPDATE -->
+
+	              <li class="<?php echo (currentpage() == 'mod_booking') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_booking/index.php">Booking Management</a></li> 
+
+
+	               <!-- NOV 29 2021 UPDATE --> 
+
 	            <li class="<?php echo (currentpage() == 'logout.php') ? "active" : false;?>"><a class="toggle-modal" href="#logout">Logout</a></li>
 	          </ul>
 	   
