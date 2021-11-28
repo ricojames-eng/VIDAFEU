@@ -1,3 +1,4 @@
+<br></br>
 <?php  
 require_once ("/app/includes/initialize.php");  
 
