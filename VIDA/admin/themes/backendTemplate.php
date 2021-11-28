@@ -196,6 +196,7 @@ $(document).ready(function() {
 
 	              <li class="<?php echo (currentpage() == 'mod_booking') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_booking/index.php">Booking Management</a></li> 
 	               <li class="<?php echo (currentpage() == 'mod_hk') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_hk/index.php">House Keeping Management</a></li>
+	               <li class="<?php echo (currentpage() == 'mod_rates') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_rates/index.php">Rates Management</a></li>
 
 
 	               <!-- NOV 29 2021 UPDATE --> 

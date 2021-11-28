@@ -91,6 +91,21 @@
       </div>
     </div>
   </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapsenine">
+          Rate Management
+        </a>
+      </h4>
+    </div>
+    <div id="collapsenine" class="panel-collapse collapse">
+      <div class="panel-body">
+        All room rates is listed here. Click <a href="mod_rates/index.php">HERE.</a>
+      </div>
+    </div>
+  </div>
  
  <?php } ?>
 </div>
