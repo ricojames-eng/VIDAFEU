@@ -1,10 +1,6 @@
 <br></br>
 <div class="container">
 		<!-- <div class="panel panel-primary"> -->
-
-
-			<div class="panel-body">
-				<br></br>
 	  		<!-- TRANSFER VALUE FROM THIS PAGE TO ANOTHER PAGE -->
 	  		<center><H1>GET ROOM INFORMATION</H1></center>
 	  		<center>
@@ -15,6 +11,8 @@
 			</form>
 			</center>
 			<!-- TRANSFER VALUE FROM THIS PAGE TO ANOTHER PAGE -->
+
+			<div class="panel-body">
 				<br></br>
 			<h3 align="left">Room Rates</h3>
 			    <form action="controller.php?action=delete" Method="POST">  					
