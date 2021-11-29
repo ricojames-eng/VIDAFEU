@@ -6,7 +6,7 @@
 			<div class="panel-body">
 				<br></br>
 	  		<!-- TRANSFER VALUE FROM THIS PAGE TO ANOTHER PAGE -->
-	  		<center><H>GET ROOM INFORMATION</H></center>
+	  		<center><H1>GET ROOM INFORMATION</H1></center>
 	  		<center>
 	  		<form method="post" action="index.php?view=find"> <!-- transfer the input text to find.php -->
 	  			<H>INPUT ROOM ID</H>

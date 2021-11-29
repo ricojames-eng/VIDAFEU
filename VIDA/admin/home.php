@@ -108,6 +108,21 @@
       </div>
     </div>
   </div>
+
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseten">
+          Billing Management
+        </a>
+      </h4>
+    </div>
+    <div id="collapseten" class="panel-collapse collapse">
+      <div class="panel-body">
+        All guest bill informations are listed here. Click <a href="mod_billing/index.php">HERE.</a>
+      </div>
+    </div>
+  </div>
  
  <?php } ?>
 </div>

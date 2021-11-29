@@ -192,14 +192,15 @@ $(document).ready(function() {
 	             <?php } ?>
 
 
-	             <!-- NOV 29 2021 UPDATE -->
+	             <!-- NOV 30 2021 UPDATE -->
 
 	              <li class="<?php echo (currentpage() == 'mod_booking') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_booking/index.php">Booking Management</a></li> 
 	               <li class="<?php echo (currentpage() == 'mod_hk') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_hk/index.php">House Keeping Management</a></li>
 	               <li class="<?php echo (currentpage() == 'mod_rates') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_rates/index.php">Rates Management</a></li>
+	               <li class="<?php echo (currentpage() == 'mod_billing') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_billing/index.php">Billings Management</a></li>
+	             
 
-
-	               <!-- NOV 29 2021 UPDATE --> 
+	               <!-- NOV 30 2021 UPDATE --> 
 
 	            <li class="<?php echo (currentpage() == 'logout.php') ? "active" : false;?>"><a class="toggle-modal" href="#logout">Logout</a></li>
 	          </ul>
