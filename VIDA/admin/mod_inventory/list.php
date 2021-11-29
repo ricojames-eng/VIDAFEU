@@ -133,7 +133,7 @@
         function showGraph()
         {
             {
-                $.post("app/admin/mod_inventory/data.php",
+                $.post("data.php",
                 function (data)
                 {
                     console.log(data);
