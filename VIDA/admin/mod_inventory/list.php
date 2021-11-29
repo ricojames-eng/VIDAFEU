@@ -44,17 +44,11 @@
   font-size: .8rem;
   color: rgba(255, 255, 255, .5);
 }
-#chart-container {
-    width: 100%;
-    height: auto;
-}
+
 </STYLE>
 
 	  <br></br>
-	  <br></br>
 	  	<form method="post">
-	  		<script type="text/javascript" src="js/jquery.min.js"></script>
-			<script type="text/javascript" src="js/Chart.min.js"></script>
 	  		<script   src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 			<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -93,7 +87,8 @@
 			        var fromdate = $(this).val();
 			       // alert(fromdate);
 			    });
-			     $("#from-datepicker5").datepicker({ 
+
+			    $("#from-datepicker5").datepicker({ 
 			        format: 'yyyy-mm-dd'
 			    });
 			    $("#from-datepicker5").on("change", function () {
@@ -129,67 +124,22 @@
           				</tr>
           			</tbody>
           		</table>   
-
-
-    <div id="chart-container">
-    <canvas id="graphCanvas"></canvas>
-    </div>
-
-    <script>
-        $(document).ready(function () {
-            showGraph();
-        });
-
-
-        function showGraph()
-        {
-            {
-                $.post("data.php",
-                function (data)
-                {
-                    console.log(data);
-                    var x = [];
-                    var y = [];
-
-                    for (var i in data) {
-                        x.push(data[i].inv_startdate);
-                        y.push(data[i].inv_guest_to_pay);
-                    }
-
-                    var chartdata = {
-                        labels: x,
-                        datasets: [
-                            {
-                                label: 'Total Sales Chart',
-                                backgroundColor: '#FFD700',
-                                borderColor: '#b9f2ff',
-                                hoverBackgroundColor: '#CCCCCC',
-                                hoverBorderColor: '#666666',
-                                data: y
-                            }
-                        ]
-                    };
-
-                    var graphTarget = $("#graphCanvas");
-
-                    var barGraph = new Chart(graphTarget, {
-                        type: 'bar',
-                        data: chartdata
-                    });
-                });
-            }
-        }
-        </script>
-
 		</form>
+</head>
+<body>
+<div id="chartContainer" style="height: 500px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<CENTER><a>VERTICAL: SALES AMOUNT | HORIZONTAL: SALES ID</a></CENTER>
+</body>
+</html>      
+
 <body>
 <div class="container">
 		<!-- <div class="panel panel-primary"> -->
 			<div class="panel-body">
 			<h3 align="left">Sales Lists</h3>
 			    <form action="controller.php?action=delete" Method="POST">  					
-				<table id="example" style="font-size:12px" class="table table-striped table-hover table-responsive"  cellspacing="0">
-					
+				<table id="example" style="font-size:12px" class="table table-striped table-hover table-responsive"  cellspacing="0">				
 				  <thead>
 				  	<tr >
 				  		<th align="top"  width="200">INVENTORY ID</th>	 <!-- inv_id -->
@@ -227,6 +177,31 @@
 											echo '<td>'. $result->inv_bal.'</td>';
 							  		echo '</tr>';
 						  	} 
+
+						  	$dataPoints = array();
+							try{
+							    $link = new \PDO(   'mysql:host=localhost;dbname=vidafeu;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
+							                        'root', //'root',
+							                        '', //'',
+							                        array(
+							                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+							                            \PDO::ATTR_PERSISTENT => false
+							                        )
+							                    );
+								
+							    $handle = $link->prepare('select inv_id, inv_guest_to_pay from tblinventory'); 
+							    $handle->execute(); 
+							    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
+									
+							    foreach($result as $row){
+							        array_push($dataPoints, array("x"=> $row->inv_id, "y"=>$row->inv_guest_to_pay));
+							    }
+								$link = null;
+							}
+							catch(\PDOException $ex){
+							    print($ex->getMessage());
+							}
+	
 				  	}
 
 				  	if(isset($_POST["ALL"])){
@@ -247,6 +222,30 @@
 											echo '<td>'. $result->inv_bal.'</td>';
 							  		echo '</tr>';
 						  	} 
+
+						  	$dataPoints = array();
+							try{
+							    $link = new \PDO(   'mysql:host=localhost;dbname=vidafeu;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
+							                        'root', //'root',
+							                        '', //'',
+							                        array(
+							                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+							                            \PDO::ATTR_PERSISTENT => false
+							                        )
+							                    );
+								
+							    $handle = $link->prepare('select inv_id, inv_guest_to_pay from tblinventory'); 
+							    $handle->execute(); 
+							    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
+									
+							    foreach($result as $row){
+							        array_push($dataPoints, array("x"=> $row->inv_id, "y"=> $row->inv_guest_to_pay));
+							    }
+								$link = null;
+							}
+							catch(\PDOException $ex){
+							    print($ex->getMessage());
+							}
 				  	}
 
 				  	if (isset($_POST["C"])) {
@@ -267,6 +266,31 @@
 											echo '<td>'. $result->inv_bal.'</td>';
 							  		echo '</tr>';
 						  	} 
+
+
+						  		  	$dataPoints = array();
+							try{
+							    $link = new \PDO(   'mysql:host=localhost;dbname=vidafeu;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
+							                        'root', //'root',
+							                        '', //'',
+							                        array(
+							                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+							                            \PDO::ATTR_PERSISTENT => false
+							                        )
+							                    );
+								
+							    $handle = $link->prepare("SELECT inv_id, inv_guest_to_pay FROM tblinventory WHERE inv_startdate LIKE '%".$_POST['M']."%'"); 
+							    $handle->execute(); 
+							    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
+									
+							    foreach($result as $row){
+							        array_push($dataPoints, array("x"=> $row->inv_id, "y"=> $row->inv_guest_to_pay));
+							    }
+								$link = null;
+							}
+							catch(\PDOException $ex){
+							    print($ex->getMessage());
+							}
 				  	}
 
 				  	if (isset($_POST["CH"])) {
@@ -287,6 +311,31 @@
 											echo '<td>'. $result->inv_bal.'</td>';
 							  		echo '</tr>';
 						  	} 
+
+
+						  	 		  	$dataPoints = array();
+							try{
+							    $link = new \PDO(   'mysql:host=localhost;dbname=vidafeu;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
+							                        'root', //'root',
+							                        '', //'',
+							                        array(
+							                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+							                            \PDO::ATTR_PERSISTENT => false
+							                        )
+							                    );
+								
+							    $handle = $link->prepare("SELECT * FROM tblinventory WHERE inv_startdate BETWEEN '".$_POST['S']."' and '".$_POST['E']."'"); 
+							    $handle->execute(); 
+							    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
+									
+							    foreach($result as $row){
+							        array_push($dataPoints, array("x"=> $row->inv_id, "y"=> $row->inv_guest_to_pay));
+							    }
+								$link = null;
+							}
+							catch(\PDOException $ex){
+							    print($ex->getMessage());
+							}
 				  	}
 
 				  	if (isset($_POST["CL"])) {
@@ -307,6 +356,30 @@
 											echo '<td>'. $result->inv_bal.'</td>';
 							  		echo '</tr>';
 						  	} 
+
+						  		  	 		  	$dataPoints = array();
+							try{
+							    $link = new \PDO(   'mysql:host=localhost;dbname=vidafeu;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
+							                        'root', //'root',
+							                        '', //'',
+							                        array(
+							                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+							                            \PDO::ATTR_PERSISTENT => false
+							                        )
+							                    );
+								
+							    $handle = $link->prepare("SELECT * FROM tblinventory WHERE inv_startdate LIKE '".$_POST['Y']."%'"); 
+							    $handle->execute(); 
+							    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
+									
+							    foreach($result as $row){
+							        array_push($dataPoints, array("x"=> $row->inv_id, "y"=> $row->inv_guest_to_pay));
+							    }
+								$link = null;
+							}
+							catch(\PDOException $ex){
+							    print($ex->getMessage());
+							}
 				  	}
 
 				  	if (isset($_POST["DAILY"])) {
@@ -327,8 +400,51 @@
 											echo '<td>'. $result->inv_bal.'</td>';
 							  		echo '</tr>';
 						  	} 
+
+						  	$dataPoints = array();
+							try{
+							    $link = new \PDO(   'mysql:host=localhost;dbname=vidafeu;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
+							                        'root', //'root',
+							                        '', //'',
+							                        array(
+							                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+							                            \PDO::ATTR_PERSISTENT => false
+							                        )
+							                    );
+								
+							    $handle = $link->prepare("SELECT * FROM tblinventory WHERE inv_startdate = '".$_POST['D']."'"); 
+							    $handle->execute(); 
+							    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
+									
+							    foreach($result as $row){
+							        array_push($dataPoints, array("x"=> $row->inv_id, "y"=> $row->inv_guest_to_pay));
+							    }
+								$link = null;
+							}
+							catch(\PDOException $ex){
+							    print($ex->getMessage());
+							}
 				  	}
 				  	?>
+
+				  	<script>
+					window.onload = function () {
+					 
+					var chart = new CanvasJS.Chart("chartContainer", {
+						animationEnabled: true,
+						exportEnabled: true,
+						theme: "light2", // "light1", "light2", "dark1", "dark2"
+						title:{
+							text: "VIDA SALES CHART"
+						},
+						data: [{
+							type: "column", //change type to bar, line, area, pie, etc  
+							dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+						}]
+					});
+					chart.render();
+					}
+					</script>
 				  </tbody>
 
 				</table>
@@ -340,3 +456,6 @@
 <div class="modal fade" id="myModal" tabindex="-1">
 </div>
 </body>
+
+
+                        
