@@ -93,6 +93,13 @@
 			        var fromdate = $(this).val();
 			       // alert(fromdate);
 			    });
+			     $("#from-datepicker5").datepicker({ 
+			        format: 'yyyy-mm-dd'
+			    });
+			    $("#from-datepicker5").on("change", function () {
+			        var fromdate = $(this).val();
+			       // alert(fromdate);
+			    });
 			}); 
 
 			</script>
@@ -103,6 +110,10 @@
           			<tbody>
           				<tr>
           				<td><button type="submit" class="btn btn-default" id="ALLCLICK" name="ALL" >DISPLAY ALL</button></td>
+          				</tr>
+          				<tr>
+          				<td><button type="submit" class="btn btn-default" name="DAILY" >DAILY</button></td>
+          				<td><div class="datetimepicker"> <input type="text" id="from-datepicker5" name="D" placeholder="Date" value=""> </div></td>     
           				</tr>
           				<tr>
           				<td><button type="submit" class="btn btn-default" name="C" >MONTHLY</button></td>
@@ -280,6 +291,26 @@
 
 				  	if (isset($_POST["CL"])) {
 						  		$mydb->setQuery("SELECT * FROM tblinventory WHERE inv_startdate LIKE '".$_POST['Y']."%'");	
+						  		$cur = $mydb->loadResultList();
+									foreach ($cur as $result) {
+							  		echo '<tr>';
+							  				echo '<td>'. $result->inv_id.'</td>';
+							  				echo '<td>'. $result->inv_guest_room.'</td>';
+											echo '<td>'. $result->inv_desc.'</td>';
+											echo '<td>'. $result->User_user_id.'</td>';
+											echo '<td>'. $result->inv_guestname.'</td>';					
+											echo '<td>'. $result->inv_startdate.'</td>';
+											echo '<td>'. $result->inv_guest_end_date.'</td>';
+											echo '<td>'. $result->inv_rate.'</td>';
+											echo '<td>'. $result->inv_guest_to_pay.'</td>';
+											echo '<td>'. $result->inv_guestpaid.'</td>';
+											echo '<td>'. $result->inv_bal.'</td>';
+							  		echo '</tr>';
+						  	} 
+				  	}
+
+				  	if (isset($_POST["DAILY"])) {
+						  		$mydb->setQuery("SELECT * FROM tblinventory WHERE inv_startdate = '".$_POST['D']."'");	
 						  		$cur = $mydb->loadResultList();
 									foreach ($cur as $result) {
 							  		echo '<tr>';
