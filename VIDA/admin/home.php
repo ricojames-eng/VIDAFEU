@@ -123,6 +123,21 @@
       </div>
     </div>
   </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseeleven">
+          Inventory Management
+        </a>
+      </h4>
+    </div>
+    <div id="collapseeleven" class="panel-collapse collapse">
+      <div class="panel-body">
+        Overall hotel inventory is listed here. Click <a href="mod_inventory/index.php">HERE.</a>
+      </div>
+    </div>
+  </div>
  
  <?php } ?>
 </div>

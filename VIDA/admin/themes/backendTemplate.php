@@ -198,7 +198,9 @@ $(document).ready(function() {
 	               <li class="<?php echo (currentpage() == 'mod_hk') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_hk/index.php">House Keeping Management</a></li>
 	               <li class="<?php echo (currentpage() == 'mod_rates') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_rates/index.php">Rates Management</a></li>
 	               <li class="<?php echo (currentpage() == 'mod_billing') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_billing/index.php">Billings Management</a></li>
-	             
+	                  <li class="<?php echo (currentpage() == 'mod_inventory') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_inventory/index.php">Inventory Management</a></li>
+
+
 
 	               <!-- NOV 30 2021 UPDATE --> 
 
