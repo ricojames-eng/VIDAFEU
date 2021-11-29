@@ -180,9 +180,9 @@
 
 						  	$dataPoints = array();
 							try{
-							    $link = new \PDO(   'mysql:host=localhost;dbname=vidafeu;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
-							                        'root', //'root',
-							                        '', //'',
+							    $link = new \PDO(   'mysql:host=remotemysql.com;dbname=pNKzi39B6c;charset=utf8mb4', //'mysql:host=remotemysql.com;dbname=canvasjs_db;charset=utf8mb4',
+							                        'pNKzi39B6c', //'pNKzi39B6c',
+							                        'Pen6jnsdwF', //'',
 							                        array(
 							                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 							                            \PDO::ATTR_PERSISTENT => false
@@ -225,9 +225,9 @@
 
 						  	$dataPoints = array();
 							try{
-							    $link = new \PDO(   'mysql:host=localhost;dbname=vidafeu;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
-							                        'root', //'root',
-							                        '', //'',
+							    $link = new \PDO(   'mysql:host=remotemysql.com;dbname=pNKzi39B6c;charset=utf8mb4', //'mysql:host=remotemysql.com;dbname=canvasjs_db;charset=utf8mb4',
+							                        'pNKzi39B6c', //'pNKzi39B6c',
+							                        'Pen6jnsdwF', //'',
 							                        array(
 							                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 							                            \PDO::ATTR_PERSISTENT => false
@@ -270,9 +270,9 @@
 
 						  		  	$dataPoints = array();
 							try{
-							    $link = new \PDO(   'mysql:host=localhost;dbname=vidafeu;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
-							                        'root', //'root',
-							                        '', //'',
+							    $link = new \PDO(   'mysql:host=remotemysql.com;dbname=pNKzi39B6c;charset=utf8mb4', //'mysql:host=remotemysql.com;dbname=canvasjs_db;charset=utf8mb4',
+							                        'pNKzi39B6c', //'pNKzi39B6c',
+							                        'Pen6jnsdwF', //'',
 							                        array(
 							                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 							                            \PDO::ATTR_PERSISTENT => false
@@ -315,9 +315,9 @@
 
 						  	 		  	$dataPoints = array();
 							try{
-							    $link = new \PDO(   'mysql:host=localhost;dbname=vidafeu;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
-							                        'root', //'root',
-							                        '', //'',
+							    $link = new \PDO(   'mysql:host=remotemysql.com;dbname=pNKzi39B6c;charset=utf8mb4', //'mysql:host=remotemysql.com;dbname=canvasjs_db;charset=utf8mb4',
+							                        'pNKzi39B6c', //'pNKzi39B6c',
+							                        'Pen6jnsdwF', //'',
 							                        array(
 							                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 							                            \PDO::ATTR_PERSISTENT => false
@@ -359,9 +359,9 @@
 
 						  		  	 		  	$dataPoints = array();
 							try{
-							    $link = new \PDO(   'mysql:host=localhost;dbname=vidafeu;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
-							                        'root', //'root',
-							                        '', //'',
+							    $link = new \PDO(   'mysql:host=remotemysql.com;dbname=pNKzi39B6c;charset=utf8mb4', //'mysql:host=remotemysql.com;dbname=canvasjs_db;charset=utf8mb4',
+							                        'pNKzi39B6c', //'pNKzi39B6c',
+							                        'Pen6jnsdwF', //'',
 							                        array(
 							                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 							                            \PDO::ATTR_PERSISTENT => false
@@ -403,9 +403,9 @@
 
 						  	$dataPoints = array();
 							try{
-							    $link = new \PDO(   'mysql:host=localhost;dbname=vidafeu;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
-							                        'root', //'root',
-							                        '', //'',
+							    $link = new \PDO(   'mysql:host=remotemysql.com;dbname=pNKzi39B6c;charset=utf8mb4', //'mysql:host=remotemysql.com;dbname=canvasjs_db;charset=utf8mb4',
+							                        'pNKzi39B6c', //'pNKzi39B6c',
+							                        'Pen6jnsdwF', //'',
 							                        array(
 							                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 							                            \PDO::ATTR_PERSISTENT => false
