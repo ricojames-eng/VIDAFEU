@@ -163,7 +163,11 @@ $accomodation = ' | ' . $_POST['accomodation'];
                    $cur = $mydb->loadResultList(); 
                       foreach ($cur as $result) { 
 
-
+                   if($cur == null){
+                      echo '<script type="text/javascript">';
+                      echo ' alert("ROOM IS NOT AVAILABLE RIGHT NOW. PLEASE TRY AGAIN OR CONTACT US.")';  //not showing an alert box.
+                      echo '</script>';
+                   }
 // filtering the rooms
  // ======================================================================================================
                     $mydb->setQuery("SELECT * FROM `tblreservation`     WHERE ((
