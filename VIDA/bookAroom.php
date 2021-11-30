@@ -164,9 +164,7 @@ $accomodation = ' | ' . $_POST['accomodation'];
                       foreach ($cur as $result) { 
 
                    if($cur == null){
-                      echo '<script type="text/javascript">';
-                      echo ' alert("ROOM IS NOT AVAILABLE RIGHT NOW. PLEASE TRY AGAIN OR CONTACT US.")';  //not showing an alert box.
-                      echo '</script>';
+                      echo "ROOM IS NOT AVAILABLE RIGHT NOW, PLEASE TRY AGAIN OR CONTACT US.";        
                    }
 // filtering the rooms
  // ======================================================================================================
