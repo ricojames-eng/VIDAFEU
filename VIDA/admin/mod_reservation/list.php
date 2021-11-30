@@ -40,7 +40,7 @@ foreach ($cur as $result) {
 <td><?php echo $result->TRANSDATE; ?></td>  
 <td><?php echo $result->CONFIRMATIONCODE; ?></td>
 <td><?php echo $result->PQTY; ?></td>
-<td>₱ <?php echo $result->SPRICE; ?></td>
+<td>$ <?php echo $result->SPRICE; ?></td>
 <td><?php echo $result->STATUS; ?></td> 
  <td >
 	<?php 

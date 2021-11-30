@@ -43,7 +43,7 @@
 						echo '<td>'. $result->ACCOMODATION.'</td>';
 				  		echo '<td>'. $result->NUMPERSON.'</td>';
 				  		
-				  		echo '<td> ₱ '. $result->PRICE.'</td>';
+				  		echo '<td> $ '. $result->PRICE.'</td>';
 				  		// echo '<td>'.$result->ROOMNUM.' </td>';
 				  		echo '</tr>';
 				  	} 

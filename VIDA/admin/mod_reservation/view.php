@@ -106,7 +106,7 @@ $day=dateDiff(date($cur->ARRIVAL),date($cur->DEPARTURE));
                 <p><strong>ARRIVAL: </strong><?php echo date_format(date_create($cur->ARRIVAL),'m/d/Y');?></p>
                 <p><strong>DEPARTURE: </strong><?php echo date_format(date_create($cur->DEPARTURE),'m/d/Y'); ?></p>
                 <p><strong>Night(s): </strong><?php echo ($day==0) ? '1' : $day; ?></p>
-                <p><strong>PRICE: </strong>₱ <?php echo $cur->RPRICE; ?></p>
+                <p><strong>PRICE: </strong>$ <?php echo $cur->RPRICE; ?></p>
                 <!-- <a class="btn btn-danger" href="<?php echo WEB_ROOT .'admin/mod_reservation/controller.php?id='.$cur->RESERVEID.'&action=cancelroom'; ?>">Cancel<i class="fa fa-angle-right"></i></a> -->
             </div>
         </div>
