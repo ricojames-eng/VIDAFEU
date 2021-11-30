@@ -260,7 +260,7 @@ $accomodation = ' | ' . $_POST['accomodation'];
                               </li>
                             </ul>
                           </div>
-                          <div class="rooms_price"><a>₱ </a><?php echo   $result->PRICE ;?>/<span>NIGHT</span></div>
+                          <div class="rooms_price"><a>$ </a><?php echo   $result->PRICE ;?>/<span>NIGHT</span></div>
                            <?php echo $btn ; ?> 
                         </div>
                       </div>

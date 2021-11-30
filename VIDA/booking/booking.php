@@ -57,7 +57,7 @@ if(isset($_GET['id'])){
                         echo '<td>'. $result->ROOM.' '. $result->ROOMDESC.' </td>';
                         echo '<td>'.date_format(date_create( $_SESSION['feuhotel_cart'][$i]['feuhotelcheckin']),"m/d/Y").'</td>';
                         echo '<td>'.date_format(date_create( $_SESSION['feuhotel_cart'][$i]['feuhotelcheckout']),"m/d/Y").'</td>';
-                        echo '<td > ₱ '. $result->PRICE.'
+                        echo '<td > $ '. $result->PRICE.'
                           <input type="hidden" value="'.$result->PRICE.'"  name="roomprice'.$_SESSION['feuhotel_cart'][$i]['feuhotelroomid'].'" id="roomprice'.$_SESSION['feuhotel_cart'][$i]['feuhotelroomid'].'"/>
 
                         </td>'; 
@@ -65,7 +65,7 @@ if(isset($_GET['id'])){
                         
                         echo  '<input type="hidden"  name="MealPrice'.$_SESSION['feuhotel_cart'][$i]['feuhotelroomid'].'" id="MealPrice'.$_SESSION['feuhotel_cart'][$i]['feuhotelroomid'].'"/>';
                         echo '</td>';
-                        echo '<td>₱ <output id="TotAmount'.$_SESSION['feuhotel_cart'][$i]['feuhotelroomid'].'" >'.$_SESSION['feuhotel_cart'][$i]['feuhotelroomprice'].'</output></td>';
+                        echo '<td>$ <output id="TotAmount'.$_SESSION['feuhotel_cart'][$i]['feuhotelroomid'].'" >'.$_SESSION['feuhotel_cart'][$i]['feuhotelroomprice'].'</output></td>';
                         echo '<td ><a href="index.php?view=processcart&id='.$result->ROOMID.'">Remove</td>';
  
                       } 
@@ -85,7 +85,7 @@ if(isset($_GET['id'])){
             <tr>
            <td colspan="6"><h4 align="right">TOTAL AMOUNT: </h4></td>
            <td colspan="4">
-             <h4><b>₱<span id="sum"><?php  echo isset($_SESSION['pay']) ?  $_SESSION['pay'] :'Your booking cart is empty.';?></span></b></h4>
+             <h4><b>$<span id="sum"><?php  echo isset($_SESSION['pay']) ?  $_SESSION['pay'] :'Your booking cart is empty.';?></span></b></h4>
                          
             </td>
             </tr>

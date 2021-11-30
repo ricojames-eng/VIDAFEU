@@ -269,9 +269,9 @@ for ($i=0; $i < $count_cart  ; $i++) {
           <td><?php echo  $result->ROOM.' '. $result->ROOMDESC; ?></td>
           <td><?php echo  date_format(date_create( $_SESSION['feuhotel_cart'][$i]['feuhotelcheckin']),"m/d/Y"); ?></td>
           <td><?php echo  date_format(date_create( $_SESSION['feuhotel_cart'][$i]['feuhotelcheckout']),"m/d/Y"); ?></td>
-          <td><?php echo  ' ₱ '. $result->PRICE; ?></td>
+          <td><?php echo  ' $ '. $result->PRICE; ?></td>
           <td><?php echo   $_SESSION['feuhotel_cart'][$i]['feuhotelday']; ?></td>
-          <td><?php echo ' ₱ '.   $_SESSION['feuhotel_cart'][$i]['feuhotelroomprice']; ?></td>
+          <td><?php echo ' $ '.   $_SESSION['feuhotel_cart'][$i]['feuhotelroomprice']; ?></td>
         </tr>
 <?php
        $payable += $_SESSION['feuhotel_cart'][$i]['feuhotelroomprice'] ;  
@@ -288,7 +288,7 @@ for ($i=0; $i < $count_cart  ; $i++) {
  
 
     <div class="right"> 
-      <h3 style="text-align: right;">Total: ₱  <?php echo $payable ;?></h3>
+      <h3 style="text-align: right;">Total: $  <?php echo $payable ;?></h3>
     </div>
     
 

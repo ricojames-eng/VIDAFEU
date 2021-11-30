@@ -89,9 +89,9 @@ if (!isset($_SESSION['feuhotel_cart'])) {
                 echo '<td>'.$_SESSION['feuhotel_cart'][$i]['feuhotelcheckin'].'</td>';
                 echo '<td>'.$_SESSION['feuhotel_cart'][$i]['feuhotelcheckout'].'</td>';
                 echo '<td>'.$_SESSION['feuhotel_cart'][$i]['feuhotelday'].'</td>';
-                echo '<td> ₱ '. $result->PRICE.'</td>';
+                echo '<td> $ '. $result->PRICE.'</td>';
                 echo '<td >1</td>';
-                echo '<td >₱ '. $_SESSION['feuhotel_cart'][$i]['feuhotelroomprice'].'</td>'; 
+                echo '<td >$ '. $_SESSION['feuhotel_cart'][$i]['feuhotelroomprice'].'</td>'; 
                 echo '</tr>';
               } 
 
@@ -105,7 +105,7 @@ if (!isset($_SESSION['feuhotel_cart'])) {
             <tr>
               <td colspan="5"></td><td align="right"><h5><b>Order Total: </b></h5>
               <td align="left">
-              <h5><b> <?php echo '₱ ' . $payable= $days*$result->PRICE; ?></b></h5>
+              <h5><b> <?php echo '$ ' . $payable= $days*$result->PRICE; ?></b></h5>
                            
               </td>
             </tr>
