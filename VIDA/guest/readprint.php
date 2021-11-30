@@ -123,11 +123,11 @@ require_once("../includes/initialize.php");
             <tr> 
               <td><?php echo $result->ACCOMODATION . ' [' .$result->ROOM.']' ;?></td>
               <td><?php echo $result->ROOMDESC . ' <br/> Person: ' .  $result->NUMPERSON;?></td>
-              <td> ₱ <?php echo $result->PRICE;?></td>
+              <td> $ <?php echo $result->PRICE;?></td>
               <td><?php echo date_format(date_create($result->ARRIVAL),'m/d/Y');?></td>
               <td><?php echo date_format(date_create($result->DEPARTURE),'m/d/Y');?></td>
               <td><?php echo ($days==0) ? '1' : $days;?></td>
-              <td> ₱ <?php echo $result->RPRICE;?></td>
+              <td> $ <?php echo $result->RPRICE;?></td>
             </tr>
             
             
@@ -163,7 +163,7 @@ require_once("../includes/initialize.php");
             <table class="table">
               <tr>
                 <th style="width:50%">Total:</th>
-                <td> ₱ <?php echo @$tot ; ?></td>
+                <td> $ <?php echo @$tot ; ?></td>
               </tr>
          <!--      <tr>
                 <th>Tax (9.3%)</th>
