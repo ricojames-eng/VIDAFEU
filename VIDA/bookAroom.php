@@ -274,9 +274,6 @@ $accomodation = ' | ' . $_POST['accomodation'];
 
  
                 ?>
-
-                <div id="notif" style="display:<?php echo $cur==null ? 'block':'none' ?>"> ROOM NOT AVAILABLE RIGHT NOW </div>
-
                   <form method="POST" action="index.php?p=accomodation">
                  <input type="hidden" name="ROOMPRICE" value="<?php echo $result->PRICE ;?>">
                   <input type="hidden" name="ROOMID" value="<?php echo $result->ROOMID ;?>">
@@ -314,7 +311,7 @@ $accomodation = ' | ' . $_POST['accomodation'];
               </div> 
           </div>
         </div>
-
+        <div id="notif" style="display:<?php echo $result->ROOM==null ? 'block':'none' ?>"> ROOM NOT AVAILABLE RIGHT NOW </div>
                   
  <script>
                      function add_number() {
