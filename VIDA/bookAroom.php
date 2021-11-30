@@ -311,7 +311,7 @@ $accomodation = ' | ' . $_POST['accomodation'];
               </div> 
           </div>
         </div>
-        <div id="notif" style="display:<?php echo $result->ROOM==null ? 'block':'none' ?>"> ROOM NOT AVAILABLE RIGHT NOW </div>
+        <CENTER><div id="notif" style="display:<?php echo $result->ROOM==null ? 'block':'none' ?>"><h1> ROOM NOT AVAILABLE RIGHT NOW. PLEASE TRY AGAIN OR CONTACT US.</h1></div></CENTER>
                   
  <script>
                      function add_number() {
