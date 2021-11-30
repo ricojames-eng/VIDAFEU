@@ -306,7 +306,7 @@ for ($i=0; $i < $count_cart  ; $i++) {
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"description":"VIDA INTERNATIONAL HOTEL AND RESORT, ROOM RENTAL. TRANSACTION ID: <?php echo $_SESSION['confirmation']; ?>.","amount":{"currency_code":"PHP","value":<?php echo $payable ;?>}}]
+            purchase_units: [{"description":"VIDA INTERNATIONAL HOTEL AND RESORT, ROOM RENTAL. TRANSACTION ID: <?php echo $_SESSION['confirmation']; ?>.","amount":{"currency_code":"USD","value":<?php echo $payable ;?>}}]
           });
         },
 
