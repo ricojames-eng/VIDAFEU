@@ -69,10 +69,10 @@
                   </div>
                   <div class="custom-select2">
                     <center><a>Adult (12+)</a></center>
-                    <input type="number" name="TextBox1" id="Text1" oninput="add_number();">
+                    <input type="number" name="TextBox1" id="Text1" min="0" oninput="add_number();" onkeypress="this.value=!!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
                     </input>
                      <center><a>Children (4 ~ 11)</a></center>
-                    <input type="number" name="TextBox2" id="Text2" oninput="add_number();">
+                    <input type="number" name="TextBox2" id="Text2" min="0" oninput="add_number();" onkeypress="this.value=!!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
                     </input>
                     <center><a>Total Persons</a></center>
                     <input  name="person" id="person" oninput="add_number();">
