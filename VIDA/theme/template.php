@@ -136,7 +136,8 @@ if (isset($_SESSION['activity'])){
         <ul class="d-flex flex-row align-items-center justify-content-start">
            <li><a href="<?php echo WEB_ROOT;?>index.php">Home</a></li>
           <li><a href="<?php echo WEB_ROOT;?>index.php?p=rooms">Offers</a></li> 
-          <li><a href="<?php echo WEB_ROOT;?>index.php?p=about">About</a></li>
+           <li><a href="<?php echo WEB_ROOT;?>index.php?p=tour">360 Tour</a></li>
+          <li><a href="<?php echo WEB_ROOT;?>index.php?p=about">About Vida</a></li>
           <li><a href="<?php echo WEB_ROOT;?>index.php?p=contact">Contact Us</a></li>
          </ul>
       </nav>

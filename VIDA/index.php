@@ -46,7 +46,12 @@ switch ($view) {
 
   case 'explore' :
     $content ='explore.php';
-    breal;
+    break;
+
+  case 'tour' :
+    $content ='virtualtour.php';
+    break;
+    
   default :
       $title="Home";  
     $content ='home.php';   

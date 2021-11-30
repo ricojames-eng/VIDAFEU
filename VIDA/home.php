@@ -348,6 +348,11 @@
           <div class="section_title text-center">
             <div>VIDA INTERNATIONAL</div>
             <h1>VIDA INTERNATIONAL HOTEL AND RESORT</h1>
+             <!-- DEC 1 UPDATE -->
+            <br></br>
+            <br></br>
+            <button class="buttonbooknow"><a href="<?php echo WEB_ROOT;?>index.php?p=tour">ENTER VIRTUAL TOUR</a></button>
+            <!-- DEC 1 UPDATE -->
           </div>
         </div>
       </div>
