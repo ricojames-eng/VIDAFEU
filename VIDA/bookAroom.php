@@ -163,12 +163,7 @@ $accomodation = ' | ' . $_POST['accomodation'];
                    $cur = $mydb->loadResultList(); 
                       foreach ($cur as $result) { 
 
-                   if($cur == null)
-                   {
-
-                      $message = "wrong answer";
-                      echo "<script type='text/javascript'>alert('$message');</script>";
-                   }
+            
 
 
 // filtering the rooms
@@ -279,6 +274,9 @@ $accomodation = ' | ' . $_POST['accomodation'];
 
  
                 ?>
+
+                <div id="notif" style="display:<?php echo $cur==null ? 'block':'none' ?>"> ROOM NOT AVAILABLE RIGHT NOW </div>
+
                   <form method="POST" action="index.php?p=accomodation">
                  <input type="hidden" name="ROOMPRICE" value="<?php echo $result->PRICE ;?>">
                   <input type="hidden" name="ROOMID" value="<?php echo $result->ROOMID ;?>">
