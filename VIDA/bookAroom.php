@@ -325,3 +325,9 @@ $accomodation = ' | ' . $_POST['accomodation'];
                                     document.getElementById("person").value = result;
                                 }
                     </script>
+
+
+  <br></br>
+    <br></br>
+      <br></br>
+        <br></br>
