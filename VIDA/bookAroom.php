@@ -29,9 +29,44 @@
             <form action="<?php echo WEB_ROOT;?>index.php?p=booking" method="POST" class="booking_form" autocomplete="off">
               <div class="booking_form_container d-flex flex-lg-row flex-column align-items-start justify-content-start flex-wrap">
                 <div class="booking_form_inputs d-flex flex-row align-items-start justify-content-between flex-wrap">
-                  <div class="booking_dropdown"><center><a>Arrival Date</a></center><input type="text" class="datepicker booking_input booking_input_a booking_in" placeholder="Check in" name="arrival" required="required" value="<?php echo isset($_POST['arrival']) ? $_POST['arrival'] :date('m/d/Y');?>"></div>
-                  <div class="booking_dropdown"><center><a>Departure Date</a></center><input type="text" class="datepicker booking_input booking_input_a booking_out" placeholder="Check out" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>" ></div>
-                  
+                   <div class="booking_dropdown">
+                    <a>Arrival Date</a>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                    <input type="date" id="arrivalid" name="arrival" required="required" value="<?php echo isset($_POST['arrival']) ? $_POST['arrival'] :date('m/d/Y');?>">
+                    <script>
+                    $(function(){
+                        var dtToday = new Date();      
+                        var month = dtToday.getMonth() + 1;
+                        var day = dtToday.getDate();
+                        var year = dtToday.getFullYear();
+                        if(month < 10)
+                            month = '0' + month.toString();
+                        if(day < 10)
+                            day = '0' + day.toString();                      
+                        var maxDate = year + '-' + month + '-' + day;
+                        $('#arrivalid').attr('min', maxDate);
+                    });
+                   </script>
+                  </div>
+                  <div class="booking_dropdown">
+                    <a>Departure Date</a>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                    <input type="date" id="departureid" name="departure" required="required" value="<?php echo isset($_POST['departure']) ? $_POST['departure'] : date('m/d/Y');?>">
+                    <script>
+                      $(function(){
+                          var dtToday = new Date();                       
+                          var month = dtToday.getMonth() + 1;
+                          var day = dtToday.getDate();
+                          var year = dtToday.getFullYear();
+                          if(month < 10)
+                              month = '0' + month.toString();
+                          if(day < 10)
+                              day = '0' + day.toString();            
+                          var maxDate = year + '-' + month + '-' + day;
+                          $('#departureid').attr('min', maxDate);
+                      });
+                   </script>
+                  </div>
                   <div class="custom-select2">
                     <center><a>Adult (12+)</a></center>
                     <input type="number" name="TextBox1" id="Text1" oninput="add_number();">
