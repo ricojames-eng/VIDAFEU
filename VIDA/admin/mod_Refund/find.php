@@ -177,10 +177,10 @@ $cur2 = $mydb->loadSingleResult();
             </div>
           </div>
           <button  name="submit3" type="submit3" class="btn btn-default">CONFIRM REFUND REQUEST</button>
-          <a>This will result in deletion of inventory record, billing record, reservation record and refunded record under the confirmation code.</a>
           <div class="btn-group">
           <input type="button" value="&laquo Back" class="btn btn-primary" onclick="window.location.href='index.php'" >
           </div>
+           <a>This will result in deletion of inventory record, billing record, reservation record and refunded record under the confirmation code.</a>
    </div><!--End of Panel Body-->
  </div><!--End of Main Panel-->  
 </form>
