@@ -2,6 +2,10 @@
     <div class="navbar-collapse ">
       <div class="sm-ul navbar-custom-menu ">
           <ul class=" navbar-nav  tooltip-demo d-flex flex-row align-items-center justify-content-start pull-right">
+           <!-- UPDATE DEC 2 -->
+            <li><a href="<?php echo WEB_ROOT;?>index.php?p=refund"><i class="fa fa-shopping-cart fa-fw"></i><span class="px-1">Refund Book</span></a></li>
+            <!-- UPDATE DEC 2 -->
+
             <li>
               <a  data-toggle="tooltip" data-placement="bottom"   title="Booking Cart"  href="<?php echo WEB_ROOT.'booking/index.php';  ?>" class="mx-1"> 
                <i class="fa fa-shopping-cart fa-fw"></i> <span class="px-1"><?php echo  isset($cart) ? $cart : '' ; ?></span>
@@ -34,7 +38,7 @@
                   <li> 
                     <a  class="read" href="<?php echo WEB_ROOT ;  ?>guest/readmessage.php?code=<?php echo  $row['CONFIRMATIONCODE']; ?>" data-toggle="lightbox"   data-id="<?php echo  $row['CONFIRMATIONCODE']; ?> " >
                       <div class="pull-left">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        
                       </div>
                       <h4>
                         Admin 

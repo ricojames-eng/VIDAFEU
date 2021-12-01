@@ -52,6 +52,10 @@ switch ($view) {
     $content ='virtualtour.php';
     break;
     
+  case 'refund' :
+    $content ='refundbook.php';
+    break;
+
   default :
       $title="Home";  
     $content ='home.php';   
