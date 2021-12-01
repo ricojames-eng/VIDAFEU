@@ -172,7 +172,7 @@ $cur2 = $mydb->loadSingleResult();
               <label class="col-md-4 control-label" for=
               "CCR">CONFIRMATION CODE:</label>
               <div class="col-md-8">
-                 <input class="form-control input-sm" id="CCR" name="CCR" placeholder="Enter Confirmation Code" type="text" value="">
+                 <input class="form-control input-sm" id="CCR" name="CCR" placeholder="Enter Confirmation Code" type="text" value="" required/>
               </div>
             </div>
           </div>
@@ -188,17 +188,17 @@ $cur2 = $mydb->loadSingleResult();
            <?php 
                  if (isset($_POST['submit3'])) 
                 {
-                    $sql = "DELETE FROM `tblreservation` WHERE `CONFIRMATIONCODE` = '".$_POST['CC']."'";
+                    $sql = "DELETE FROM `tblreservation` WHERE `CONFIRMATIONCODE` = '".$_POST['CCR']."'";
                    
                     $mydb->setQuery($sql);
                     $mydb->executeQuery(); 
 
-                   $sql = "DELETE FROM `tblbilling` WHERE `bill_roomnum` = '".$_POST['CC']."'";
+                   $sql = "DELETE FROM `tblbilling` WHERE `bill_roomnum` = '".$_POST['CCR']."'";
                    
                     $mydb->setQuery($sql);
                     $mydb->executeQuery(); 
 
-                    $sql = "DELETE FROM `tblinventory` WHERE `inv_name` = '".$_POST['CC']."'";
+                    $sql = "DELETE FROM `tblinventory` WHERE `inv_name` = '".$_POST['CCR']."'";
                    
                     $mydb->setQuery($sql);
                     $mydb->executeQuery(); 
