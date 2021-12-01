@@ -2,15 +2,21 @@
 <div class="container">
 
 		  		<!-- TRANSFER VALUE FROM THIS PAGE TO ANOTHER PAGE -->
-	  		<!--<center><H1>DISPLAY GUEST BOOKINGS INFORMATIONS</H1></center>
+	  		<center><H1>DISPLAY GUEST BOOKINGS INFORMATIONS</H1></center>
 	  		<center>
-	  		<form method="post" action="index.php?view=find"> -->
-	  		<!--	<H>INPUT GUEST ID</H>
-			    <input type="number" name="txt" />
+	  		<form method="post" action="index.php?view=find"> <!-- transfer the input text to find.php -->
+	  		<div>
+	  			<H>INPUT GUEST ID</H>
+			    <input type="number" name="guessid" required/>
+		
+			    <H>BOOK CODE</H>
+			    <input type="text" name="code" required/>
+			</div>
+			<br></br>
 			    <input type="submit" class="btn btn-primary"/>
 			</form>
 			</center>
-			TRANSFER VALUE FROM THIS PAGE TO ANOTHER PAGE -->
+				<!-- TRANSFER VALUE FROM THIS PAGE TO ANOTHER PAGE -->
 
 		<!-- <div class="panel panel-primary"> -->
 			<div class="panel-body">
@@ -24,7 +30,7 @@
 				  		<th align="left"  width="200">DATE</th>	
 				  		<th align="left" width="200">BOOKING ID</th> 
 				  		<th align="left" width="200">GUEST ID</th>
-				  		<th align="left"  width="250">CONFIRMATION CODE</th>
+				  		<th align="left"  width="250">CODE</th>
 				  		<th align="left"  width="200">ROOMID</th>
 				  		<th align="left"  width="200">ARRIVAL</th>
 				  		<th align="left"  width="200">DEPARTURE</th>
