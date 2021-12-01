@@ -191,6 +191,18 @@ $cur2 = $mydb->loadSingleResult();
                    
                     $mydb->setQuery($sql);
                     $mydb->executeQuery(); 
+
+                   $sql = "DELETE FROM `tblbilling` WHERE `bill_roomnum` = '".$_POST['CC']."'";
+                   
+                    $mydb->setQuery($sql);
+                    $mydb->executeQuery(); 
+
+                    $sql = "DELETE FROM `tblinventory` WHERE `inv_name` = '".$_POST['CC']."'";
+                   
+                    $mydb->setQuery($sql);
+                    $mydb->executeQuery(); 
                    redirect("index.php");
                 }
+
+
           ?>

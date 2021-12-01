@@ -118,7 +118,7 @@ $_SESSION['GUESTID'] =   $lastguest;
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
 
-     $sql = "INSERT INTO tblbilling (bill_amount, bill_misc_charges, bill_room_charges, bill_mode_of_payment, bill_roomnum, bill_balance, Booking_id) VALUES ('$tot','0','0','Paypal Payment','$ROOMN','$tot','$GUESTNUM')";  // Booking_id = GUEST NUMBER;
+     $sql = "INSERT INTO tblbilling (bill_amount, bill_misc_charges, bill_room_charges, bill_mode_of_payment, bill_roomnum, bill_balance, Booking_id) VALUES ('$tot','0','0','Paypal Payment','$CONFIRM','$tot','$GUESTNUM')";  // Booking_id = GUEST NUMBER;
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
 
@@ -130,7 +130,7 @@ $_SESSION['GUESTID'] =   $lastguest;
       $ROOMNAME=$cur->ROOM;
       $ROOMDES =$cur->ROOMDESC;
      
-      $sql = "INSERT INTO `tblinventory`(`inv_name`, `inv_desc`, `inv_guestname`, `inv_startdate`, `inv_guest_end_date`, `inv_rate`, `inv_guestpaid`, `inv_guest_to_pay`, `inv_bal`, `inv_guest_room`, `User_user_id`) VALUES ('ROOM RENTAL','$ROOMDES','$GUESTN','$STARTD','$ENDD','$tot','0','$tot','$tot','$ROOMNAME','$GUESTNUM')";
+      $sql = "INSERT INTO `tblinventory`(`inv_name`, `inv_desc`, `inv_guestname`, `inv_startdate`, `inv_guest_end_date`, `inv_rate`, `inv_guestpaid`, `inv_guest_to_pay`, `inv_bal`, `inv_guest_room`, `User_user_id`) VALUES ('$CONFIRM','$ROOMDES','$GUESTN','$STARTD','$ENDD','$tot','0','$tot','$tot','$ROOMNAME','$GUESTNUM')";
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
 
