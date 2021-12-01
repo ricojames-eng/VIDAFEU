@@ -373,7 +373,7 @@ By securing your onlinebooking with a visa card, your booking  is guaranteed. Al
  
 
 <h3>Cancellation </h3>
-<li>If there is a cancellation of a room reservation within 24hours prior to the arrival date, but the payments cannot refund once you already booking for the reservation.
+<li>If there is a cancellation of a room reservation within 24hours prior to the arrival date, The guest will be charged 10% equivalent to the total amount of their booked room once their reservation is confirmed and paid. To refund the total amount, the guest must give a valid and acceptable reason with proof prior to concern.
 <li>Additional Requests
 <li>All additional or special requests are subject to availability and we cannot guarantee the provision for special requests. Any additional requests made should be prior to your arrival at the hotel, giving reasonable advance notice.
 <li>General Information
