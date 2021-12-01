@@ -8,7 +8,7 @@
 
             <li>
               <a  data-toggle="tooltip" data-placement="bottom"   title="Booking Cart"  href="<?php echo WEB_ROOT.'booking/index.php';  ?>" class="mx-1"> 
-               <i class="fa fa-shopping-cart fa-fw"></i> <span class="px-1"><?php echo  isset($cart) ? $cart : '' ; ?></span>
+               <i class="fa fa-shopping-cart fa-fw"></i> <span class="px-1">Cart: <?php echo  isset($cart) ? $cart : '' ; ?></span>
              </a>
             </li>
 

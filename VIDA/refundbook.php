@@ -38,7 +38,7 @@
         FROM  `tblreservation` r,   `tblroom` rm, tblaccomodation a
         WHERE r.`ROOMID` = rm.`ROOMID` 
         AND a.`ACCOMID` = rm.`ACCOMID`  
-        AND  r.`GUESTID` = ".$_SESSION['GUESTID'];
+        AND  r.`GUESTID` = ".$_SESSION['GUESTID']." AND r.`STATUS` = 'Confirmed'";
         $mydb->setQuery($query);
         $res = $mydb->loadResultList();
 
