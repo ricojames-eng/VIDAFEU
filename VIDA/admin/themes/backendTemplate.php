@@ -170,8 +170,8 @@ $(document).ready(function() {
 	        <div class="collapse navbar-collapse">
 	          <ul class="nav navbar-nav">
 	            <li class="<?php echo (currentpage() == 'index.php') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/index.php" >Home</a></li>
-	            <li class="<?php echo (currentpage() == 'mod_room') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_room/index.php">Rooms</a></li>
-	            <li class="<?php echo (currentpage() == 'mod_accomodation') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_accomodation/index.php">Accomodation</a></li>
+	            <li class="<?php echo (currentpage() == 'mod_room') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_room/index.php">Room Management</a></li>
+	            <li class="<?php echo (currentpage() == 'mod_accomodation') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_accomodation/index.php">Accomodation Management</a></li>
 				
 	            <li class="<?php echo (currentpage() == 'mod_reservation') ? "active" : false;?>">
             	<?php
@@ -186,15 +186,16 @@ $(document).ready(function() {
 	            ?>
 	            </li>
 
-	             <li class="<?php echo (currentpage() == 'mod_reports') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_reports/index.php">Reports</a></li>
+	             <li class="<?php echo (currentpage() == 'mod_reports') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_reports/index.php">Report Management</a></li>
 	            <?php if($_SESSION['ADMIN_UROLE']=="Administrator"){ ?>
-	             <li class="<?php echo (currentpage() == 'mod_users') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_users/index.php" >Users</a></li>
+	             <li class="<?php echo (currentpage() == 'mod_users') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_users/index.php" >Admin Management</a></li>
 	             <?php } ?>
 
 
 	             <!-- NOV 30 2021 UPDATE -->
 
-	              <li class="<?php echo (currentpage() == 'mod_booking') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_booking/index.php">Booking Management</a></li> 
+	              <li class="<?php echo (currentpage() == 'mod_booking') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_booking/index.php">Bookings Management</a></li> 
+	              <li class="<?php echo (currentpage() == 'mod_Refund') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_Refund/index.php">Refund Management</a></li>
 	               <li class="<?php echo (currentpage() == 'mod_hk') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_hk/index.php">House Keeping Management</a></li>
 	               <li class="<?php echo (currentpage() == 'mod_rates') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_rates/index.php">Rates Management</a></li>
 	               <li class="<?php echo (currentpage() == 'mod_billing') ? "active" : false;?>"><a href="<?php echo WEB_ROOT; ?>admin/mod_billing/index.php">Billings Management</a></li>
