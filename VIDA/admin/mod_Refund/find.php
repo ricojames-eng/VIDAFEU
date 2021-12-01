@@ -133,7 +133,7 @@ $cur2 = $mydb->loadSingleResult();
               "BAM">Book Amount:</label>
               <div class="col-md-8">
                  <input name="BILAM" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->RPRICE;} ?>">
-                 <input class="form-control input-sm" id="BAM" name="BAM" placeholder=
+                 <input disabled class="form-control input-sm" id="BAM" name="BAM" placeholder=
                     "Bill Amount" type="number" value="<?php if (isset($cur2)) {echo ''.$cur2->RPRICE;} ?>">
               </div>
             </div>
@@ -145,7 +145,7 @@ $cur2 = $mydb->loadSingleResult();
               "CONC">Confirmation Code:</label>
               <div class="col-md-8">
                  <input name="CC" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->CONFIRMATIONCODE;} ?>">
-                 <input class="form-control input-sm" id="CONC" name="CONC" placeholder=
+                 <input disabled class="form-control input-sm" id="CONC" name="CONC" placeholder=
                     "Confrimation Code" type="text" value="<?php if (isset($cur2)) {echo ''.$cur2->CONFIRMATIONCODE;} ?>">
               </div>
             </div>
@@ -157,7 +157,7 @@ $cur2 = $mydb->loadSingleResult();
               "ST">Status:</label>
               <div class="col-md-8">
                  <input name="STS" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->STATUS;} ?>">
-                 <input class="form-control input-sm" id="ST" name="ST" placeholder=
+                 <input disabled class="form-control input-sm" id="ST" name="ST" placeholder=
                     "Status" type="text" value="<?php if (isset($cur2)) {echo ''.$cur2->STATUS;} ?>">
               </div>
             </div>
@@ -171,12 +171,12 @@ $cur2 = $mydb->loadSingleResult();
               <label class="col-md-4 control-label" for=
               "CCR">CONFIRMATION CODE:</label>
               <div class="col-md-8">
-                 <input class="form-control input-sm" id="CCR" name="CCR" placeholder="0" type="text" value="">
+                 <input class="form-control input-sm" id="CCR" name="CCR" placeholder="Enter Confirmation Code" type="text" value="">
               </div>
             </div>
           </div>
           <button  name="submit3" type="submit3" class="btn btn-default">CONFIRM REFUND REQUEST</button>
-
+          <a>This will result in deletion of inventory record, billing record, reservation record and refunded record under the confirmation code.</a>
           <div class="btn-group">
           <input type="button" value="&laquo Back" class="btn btn-primary" onclick="window.location.href='index.php'" >
           </div>
@@ -187,14 +187,7 @@ $cur2 = $mydb->loadSingleResult();
            <?php 
                  if (isset($_POST['submit3'])) 
                 {
-                     $previousbalance = $_POST['BALE'];
-                     $addpayment = $_POST['APA'];  
-                     $previouspaid = $_POST['PDAA'];  
-                     $totalpaid =  $previouspaid+$addpayment;    
-                     $totalbalance = $previousbalance-$addpayment; 
-
-                    //$sql = "UPDATE `tblreservation` SET `ARRIVAL`= '".date_format(date_create($_POST['ARRDT']),'Y-m-d')."', `DEPARTURE`='".date_format(date_create($_POST['DEDT']),'Y-m-d h:i')."', `ROOMID`='".$_POST['ROOMID']."', `STATUS`='".$_POST['STS']."' WHERE `GUESTID` ='$GID'";
-                    $sql = "UPDATE `tblbilling` SET `bill_paidamount`='$totalpaid', `bill_balance`='$totalbalance' WHERE `bill_id` = '".$_POST['BID']."'";
+                    $sql = "DELETE FROM `tblreservation` WHERE `CONFIRMATIONCODE` = '".$_POST['CC']."'";
                    
                     $mydb->setQuery($sql);
                     $mydb->executeQuery(); 
