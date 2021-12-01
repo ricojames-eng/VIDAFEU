@@ -1,6 +1,3 @@
-<br></br>
-<br></br>
-<br></br>
 <STYLE>
 
 * {
@@ -52,10 +49,11 @@
 </STYLE>
 
 <?php
-$GID = $_POST['txt']; // GET THE VALUE TRANSFERRED FROM list.php page to this page.
+$GID = $_POST['guessid']; // GET THE VALUE TRANSFERRED FROM list.php page to this page.
+$CID = $_POST['code']; // GET THE VALUE TRANSFERRED FROM list.php page to this page.
 $mydb->setQuery("SELECT * FROM tblguest WHERE GUESTID ='$GID'");
 $cur = $mydb->loadSingleResult();
-$mydb->setQuery("SELECT * FROM tblreservation WHERE GUESTID ='$GID'");
+$mydb->setQuery("SELECT * FROM tblinventory WHERE GUESTID ='$GID' and CONFIRMATIONCODE ='$CID'");
 $cur2 = $mydb->loadSingleResult();
 ?>
 
@@ -66,7 +64,7 @@ $cur2 = $mydb->loadSingleResult();
 <form method="post">
 <div class="panel panel-primary">
   <div class="panel-body">
-        <caption><h3 align="center">BOOKING AND GUEST INFORMATION</h3></caption>
+        <caption><h3 align="center">GUEST REFUND REQUEST INFORMATION</h3></caption>
     <table class="table table-hover" border="0">
     <tr>
         <div class="form-group">
@@ -120,11 +118,11 @@ $cur2 = $mydb->loadSingleResult();
              <div class="form-group">
             <div class="col-md-8">
               <label class="col-md-4 control-label" for=
-              "BOOKID">Booking ID:</label>
+              "BOOKID">BOOK ID:</label>
               <div class="col-md-8">
                  <input name="BID" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->RESERVEID;} ?>">
                  <input disabled class="form-control input-sm" id="BOOKID" name="BOOKID" placeholder=
-                    "Booking Id" type="text" value="<?php if (isset($cur2)) {echo ''.$cur2->RESERVEID;} ?>">
+                    "Booked ID" type="text" value="<?php if (isset($cur2)) {echo ''.$cur2->RESERVEID;} ?>">
               </div>
             </div>
           </div>
@@ -132,11 +130,11 @@ $cur2 = $mydb->loadSingleResult();
               <div class="form-group">
             <div class="col-md-8">
               <label class="col-md-4 control-label" for=
-              "CONCODE">CONFIRMATION CODE:</label>
+              "BAM">Book Amount:</label>
               <div class="col-md-8">
-                 <input name="CCODE" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->CONFIRMATIONCODE;} ?>">
-                 <input disabled class="form-control input-sm" id="CONCODE" name="CONCODE" placeholder=
-                    "Confirmation Code" type="text" value="<?php if (isset($cur2)) {echo ''.$cur2->CONFIRMATIONCODE;} ?>">
+                 <input name="BILAM" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->RPRICE;} ?>">
+                 <input class="form-control input-sm" id="BAM" name="BAM" placeholder=
+                    "Bill Amount" type="number" value="<?php if (isset($cur2)) {echo ''.$cur2->RPRICE;} ?>">
               </div>
             </div>
           </div>
@@ -144,54 +142,11 @@ $cur2 = $mydb->loadSingleResult();
             <div class="form-group">
             <div class="col-md-8">
               <label class="col-md-4 control-label" for=
-              "ROOMID">ROOM ID:</label>
+              "CONC">Confirmation Code:</label>
               <div class="col-md-8">
-                 <input name="RMID" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->ROOMID;} ?>">
-                 <input class="form-control input-sm" id="ROOMID" name="ROOMID" placeholder=
-                    "Room Id" type="text" value="<?php if (isset($cur2)) {echo ''.$cur2->ROOMID;} ?>">
-              </div>
-            </div>
-          </div>
-
-            <div class="form-group">
-            <div class="col-md-8">
-              <label class="col-md-4 control-label" for=
-              "ARRDT">ARRIVAL DATE:</label>
-              <div class="col-md-8">
-                 <input name="RMID" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->ARRIVAL;} ?>">
-                    
-                    <?php
-                    if (isset($cur2)){
-                        $date = $cur2->ARRIVAL;
-                        $newDate = date("Y-m-d", strtotime($date));   
-                        }            
-                    ?>
-                    <div class="datetimepicker"> <input type="date" id="ARRDT" name="ARRDT" placeholder="Arrival Date" value="<?php if (isset($cur2)) {echo $newDate;} ?>"> </div>
-                    <script type="text/javascript">
-                      var dateEl = document.getElementById('date');
-                      document.getElementById('date-output').innerHTML = dateEl.type === 'date';
-                    </script>
-               </div>
-            </div>
-          </div>
-
-             <div class="form-group">
-            <div class="col-md-8">
-              <label class="col-md-4 control-label" for=
-              "DEDT">DEPARTURE DATE:</label>
-              <div class="col-md-8">
-                 <input name="RMID" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->DEPARTURE;} ?>">
-                   <?php
-                    if (isset($cur2)){
-                        $date = $cur2->DEPARTURE;
-                        $newDate = date("Y-m-d", strtotime($date));   
-                        }            
-                    ?>
-                    <div class="datetimepicker"> <input type="date" id="DEDT" name="DEDT" placeholder="Departure Date" value="<?php if (isset($cur2)) {echo $newDate;} ?>"> </div>
-                    <script type="text/javascript">
-                      var dateEl = document.getElementById('date');
-                      document.getElementById('date-output').innerHTML = dateEl.type === 'date';
-                    </script>
+                 <input name="CC" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->CONFIRMATIONCODE;} ?>">
+                 <input class="form-control input-sm" id="CONC" name="CONC" placeholder=
+                    "Confrimation Code" type="number" value="<?php if (isset($cur2)) {echo ''.$cur2->CONFIRMATIONCODE;} ?>">
               </div>
             </div>
           </div>
@@ -199,52 +154,50 @@ $cur2 = $mydb->loadSingleResult();
               <div class="form-group">
             <div class="col-md-8">
               <label class="col-md-4 control-label" for=
-              "STS">BOOK STATUS:</label>
+              "ST">Status:</label>
               <div class="col-md-8">
-                 <input name="BSTS" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->STATUS;} ?>">
-                    <div class="datetimepicker"><select name="STS" id="STS">
-                      <option value="<?php if (isset($cur2)) {echo ''.$cur2->STATUS;} ?>"><?php if (isset($cur2)) {echo ''.$cur2->STATUS;} ?></option>
-                      <option value="Checkin">Checkin</option>
-                      <option value="Pending">Pending</option>
-                      <option value="Cancelled">Cancelled</option>
-                    </select></div>
+                 <input name="STS" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->STATUS;} ?>">
+                 <input class="form-control input-sm" id="ST" name="ST" placeholder=
+                    "Status" type="number" value="<?php if (isset($cur2)) {echo ''.$cur2->STATUS;} ?>">
               </div>
             </div>
-          </div>     
-
+          </div>
     </tr>
     <br></br>
     </table>
 
+         <div class="form-group">
+            <div class="col-md-8">
+              <label class="col-md-4 control-label" for=
+              "CCR">CONFIRMATION CODE:</label>
+              <div class="col-md-8">
+                 <input class="form-control input-sm" id="CCR" name="CCR" placeholder="0" type="number" value="">
+              </div>
+            </div>
+          </div>
+          <button  name="submit3" type="submit3" class="btn btn-default">CONFIRM REFUND REQUEST</button>
 
-    <div class="btn-group">
-          <button name="submit" type="submit" class="btn btn-default" name="UPDATE">UPDATE</button>
-          <button name="submit2" type="submit2" class="btn btn-default" name="DELETE">DELETE</button>
+          <div class="btn-group">
           <input type="button" value="&laquo Back" class="btn btn-primary" onclick="window.location.href='index.php'" >
-    </div>
+          </div>
+   </div><!--End of Panel Body-->
+ </div><!--End of Main Panel-->  
+</form>
 
-
-            <?php 
-
-              if (isset($_POST['submit'])) 
+           <?php 
+                 if (isset($_POST['submit3'])) 
                 {
+                     $previousbalance = $_POST['BALE'];
+                     $addpayment = $_POST['APA'];  
+                     $previouspaid = $_POST['PDAA'];  
+                     $totalpaid =  $previouspaid+$addpayment;    
+                     $totalbalance = $previousbalance-$addpayment; 
+
                     //$sql = "UPDATE `tblreservation` SET `ARRIVAL`= '".date_format(date_create($_POST['ARRDT']),'Y-m-d')."', `DEPARTURE`='".date_format(date_create($_POST['DEDT']),'Y-m-d h:i')."', `ROOMID`='".$_POST['ROOMID']."', `STATUS`='".$_POST['STS']."' WHERE `GUESTID` ='$GID'";
-                    $sql = "UPDATE `tblreservation` SET `ARRIVAL`= '".date_format(date_create($_POST['ARRDT']),'Y-m-d')."', `DEPARTURE`='".date_format(date_create($_POST['DEDT']),'Y-m-d')."', `ROOMID`='".$_POST['ROOMID']."', `STATUS`='".$_POST['STS']."' WHERE `GUESTID` = '".$_POST['GSID']."'";
-                   
-                    $mydb->setQuery($sql);
-                    $mydb->executeQuery(); 
-                   redirect("index.php");
-                }
-
-                 if (isset($_POST['submit2'])) 
-                {
-                    $sql = "DELETE FROM `tblreservation` WHERE `GUESTID` = '".$_POST['GSID']."'";
+                    $sql = "UPDATE `tblbilling` SET `bill_paidamount`='$totalpaid', `bill_balance`='$totalbalance' WHERE `bill_id` = '".$_POST['BID']."'";
                    
                     $mydb->setQuery($sql);
                     $mydb->executeQuery(); 
                    redirect("index.php");
                 }
           ?>
-   </div><!--End of Panel Body-->
- </div><!--End of Main Panel-->  
-</form>
