@@ -2,7 +2,7 @@
 <div class="container">
 
 		  		<!-- TRANSFER VALUE FROM THIS PAGE TO ANOTHER PAGE -->
-	  		<center><H1>DISPLAY GUEST BOOKINGS INFORMATIONS</H1></center>
+	  		<center><H1>DISPLAY GUEST REFUNDED BOOK INFORMATIONS</H1></center>
 	  		<center>
 	  		<form method="post" action="index.php?view=find"> <!-- transfer the input text to find.php -->
 	  		<div>

@@ -53,7 +53,7 @@ $GID = $_POST['guessid']; // GET THE VALUE TRANSFERRED FROM list.php page to thi
 $CID = $_POST['code']; // GET THE VALUE TRANSFERRED FROM list.php page to this page.
 $mydb->setQuery("SELECT * FROM tblguest WHERE GUESTID ='$GID'");
 $cur = $mydb->loadSingleResult();
-$mydb->setQuery("SELECT * FROM tblinventory WHERE GUESTID ='$GID' and CONFIRMATIONCODE ='$CID'");
+$mydb->setQuery("SELECT * FROM tblreservation WHERE GUESTID ='$GID' and CONFIRMATIONCODE ='$CID'");
 $cur2 = $mydb->loadSingleResult();
 ?>
 
