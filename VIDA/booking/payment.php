@@ -340,6 +340,7 @@ for ($i=0; $i < $count_cart  ; $i++) {
       </div>
     </div>
        <CENTER><button type="submit" class="button"  name="btnsubmitbooking">Submit Booking</button></CENTER>
+        <CENTER><a>By Clicking this button, It means that you agreed and understand the Terms and Condition.</a></CENTER>
     </div>
   </div>   
 </form>
