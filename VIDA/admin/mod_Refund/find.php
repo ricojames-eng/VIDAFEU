@@ -146,7 +146,7 @@ $cur2 = $mydb->loadSingleResult();
               <div class="col-md-8">
                  <input name="CC" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->CONFIRMATIONCODE;} ?>">
                  <input class="form-control input-sm" id="CONC" name="CONC" placeholder=
-                    "Confrimation Code" type="number" value="<?php if (isset($cur2)) {echo ''.$cur2->CONFIRMATIONCODE;} ?>">
+                    "Confrimation Code" type="text" value="<?php if (isset($cur2)) {echo ''.$cur2->CONFIRMATIONCODE;} ?>">
               </div>
             </div>
           </div>
@@ -158,7 +158,7 @@ $cur2 = $mydb->loadSingleResult();
               <div class="col-md-8">
                  <input name="STS" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->STATUS;} ?>">
                  <input class="form-control input-sm" id="ST" name="ST" placeholder=
-                    "Status" type="number" value="<?php if (isset($cur2)) {echo ''.$cur2->STATUS;} ?>">
+                    "Status" type="text" value="<?php if (isset($cur2)) {echo ''.$cur2->STATUS;} ?>">
               </div>
             </div>
           </div>
@@ -171,7 +171,7 @@ $cur2 = $mydb->loadSingleResult();
               <label class="col-md-4 control-label" for=
               "CCR">CONFIRMATION CODE:</label>
               <div class="col-md-8">
-                 <input class="form-control input-sm" id="CCR" name="CCR" placeholder="0" type="number" value="">
+                 <input class="form-control input-sm" id="CCR" name="CCR" placeholder="0" type="text" value="">
               </div>
             </div>
           </div>
