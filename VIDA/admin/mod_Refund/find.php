@@ -120,6 +120,7 @@ $cur2 = $mydb->loadSingleResult();
               <label class="col-md-4 control-label" for=
               "BOOKID">BOOK ID:</label>
               <div class="col-md-8">
+                <input name="RIDD" id="RIDD" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->ROOMID;} ?>">
                  <input name="BID" type="hidden" value="<?php if (isset($cur2)) {echo ''.$cur2->RESERVEID;} ?>">
                  <input disabled class="form-control input-sm" id="BOOKID" name="BOOKID" placeholder=
                     "Booked ID" type="text" value="<?php if (isset($cur2)) {echo ''.$cur2->RESERVEID;} ?>">
@@ -199,6 +200,11 @@ $cur2 = $mydb->loadSingleResult();
 
                     $sql = "DELETE FROM `tblinventory` WHERE `inv_name` = '".$_POST['CC']."'";
                    
+                    $mydb->setQuery($sql);
+                    $mydb->executeQuery(); 
+
+                    $sql = "UPDATE `tblroom`, SET ROOMNUM=ROOMNUM + 1 WHERE `ROOMID` ='" . $_GET['RIDD'] ."'";
+                    
                     $mydb->setQuery($sql);
                     $mydb->executeQuery(); 
                    redirect("index.php");
