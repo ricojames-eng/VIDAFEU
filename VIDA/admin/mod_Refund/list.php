@@ -27,10 +27,10 @@
 					
 				  <thead>
 				  	<tr  >
+				  		<th align="left" width="200">GUEST ID</th>
+				  		<th align="left"  width="250">BOOK CODE</th>
 				  		<th align="left"  width="200">DATE</th>	
 				  		<th align="left" width="200">BOOKING ID</th> 
-				  		<th align="left" width="200">GUEST ID</th>
-				  		<th align="left"  width="250">CODE</th>
 				  		<th align="left"  width="200">ROOMID</th>
 				  		<th align="left"  width="200">ARRIVAL</th>
 				  		<th align="left"  width="200">DEPARTURE</th>
@@ -45,11 +45,11 @@
 				  		$cur = $mydb->loadResultList();
 							foreach ($cur as $result) {
 					  		echo '<tr>';
+					  				echo '<td>'. $result->GUESTID.'</td>';
+									echo '<td>'. $result->CONFIRMATIONCODE.'</td>';	
 					  				echo '<td>'. $result->TRANSDATE.'</td>';
 									echo '<td>'. $result->RESERVEID.'</td>';
-									//echo '<td align="left"  width="120"> <input type="checkbox" name="selector[]" id="selector[]" value="'.$result->RESERVEID.'"/>  '. $result->RESERVEID.'</td>';
-									echo '<td>'. $result->GUESTID.'</td>';
-									echo '<td>'. $result->CONFIRMATIONCODE.'</td>';					
+									//echo '<td align="left"  width="120"> <input type="checkbox" name="selector[]" id="selector[]" value="'.$result->RESERVEID.'"/>  '. $result->RESERVEID.'</td>';				
 									echo '<td>'. $result->ROOMID.'</td>';
 									echo '<td>'. $result->ARRIVAL.'</td>';
 									echo '<td>'. $result->DEPARTURE.'</td>';
