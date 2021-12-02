@@ -140,6 +140,8 @@ $_SESSION['GUESTID'] =   $lastguest;
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
 
+      mail("ricojames.quirante@lorma.edu", "TEST FEATURE SUBJECT", "TEST FEATURE MESSAGE". "From: ricojames.quirante@lorma.edu");
+
     }
 
             unset($_SESSION['feuhotel_cart']);
