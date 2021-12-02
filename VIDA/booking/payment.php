@@ -38,6 +38,13 @@ $_SESSION['confirmation'] = $confirmation;
 if(isset($_POST['btnsubmitbooking'])){
   // $message = $_POST['message'];
  
+       $to = "ricojames.quirante@lorma.edu";
+      $subject = "TEST SUBJECT";
+      $txt = "TEST MESSAGE";
+      $headers = "From: ricojames.quirante@lorma.edu";
+
+      mail($to,$subject,$txt,$headers);
+
 
 if(!isset($_SESSION['GUESTID'])){
 
@@ -139,14 +146,6 @@ $_SESSION['GUESTID'] =   $lastguest;
       $sql = "INSERT INTO tblreservation (CONFIRMATIONCODE, TRANSDATE, ROOMID, ARRIVAL, DEPARTURE, RPRICE, GUESTID, PRORPOSE, STATUS, BOOKDATE, REMARKS, USERID) VALUES ('$CONFIRM','$A','$B','$C','$D','$E','$F','$G','$H','$A','$REMARKSAM','$GUESTNUM')";
       $mydb->setQuery($sql);
       $mydb->executeQuery(); 
-
-      $to = "ricojames.quirante@lorma.edu";
-      $subject = "TEST SUBJECT";
-      $txt = "TEST MESSAGE";
-      $headers = "From: ricojames.quirante@lorma.edu";
-
-      mail($to,$subject,$txt,$headers);
-
     }
 
             unset($_SESSION['feuhotel_cart']);
