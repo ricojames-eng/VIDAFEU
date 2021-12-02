@@ -63,7 +63,7 @@ foreach ($cur as $result) {
 			<td>
 			<a href="mailto:<?php echo $result->G_EMAIL; ?>?
 			subject=VIDA INTERNATIONAL HOTEL AND RESORT&
-			body=Good day Guest! %0D%0A %0D%0A We Would like to inform you that your reservation is already <?php echo $result->STATUS; ?>! See you on your arrival. %0D%0A %0D%0A This is your Confirmation Code to the hotel: <?php echo $result->CONFIRMATIONCODE; ?>.%0D%0A %0D%0A Thank you and God Bless %0D%0A%0D%0A" 
+			body=Dear Guest, %0D%0A %0D%0A We Would like to inform you that your reservation is already <?php echo $result->STATUS; ?>! See you on your arrival. %0D%0A %0D%0A This is your Confirmation Code to the hotel: <?php echo $result->CONFIRMATIONCODE; ?>.%0D%0A %0D%0A Thank you and God Bless. %0D%0A%0D%0A" 
 			class="btn btn-primary btn-xs" ><i class="icon-edit">SEND EMAIL</a>
 			</td>
 			<center>
@@ -126,7 +126,7 @@ foreach ($cur as $result) {
 			<td>
 			<a href="mailto:<?php echo $result->G_EMAIL; ?>?
 			subject=VIDA INTERNATIONAL HOTEL AND RESORT&
-			body=Good day Guest! %0D%0A %0D%0A We Would like to inform you With all regrets on behalf of Vida International Hotel, that your reservation is <?php echo $result->STATUS; ?>. Vida International still wants to be part of your future travel, feel free to book again in the near future. %0D%0A %0D%0A Thank you and God Bless %0D%0A%0D%0A" 
+			body=Dear Guest, %0D%0A %0D%0A We Would like to inform you With all regrets on behalf of Vida International Hotel, that your reservation is <?php echo $result->STATUS; ?>. Vida International still wants to be part of your future travel, feel free to book again in the near future. %0D%0A %0D%0A Thank you and God Bless. %0D%0A%0D%0A" 
 			class="btn btn-primary btn-xs" ><i class="icon-edit">SEND EMAIL</a>
 			</td>
 			<td></td>
