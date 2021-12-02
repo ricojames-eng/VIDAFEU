@@ -37,6 +37,24 @@ $_SESSION['confirmation'] = $confirmation;
 
 if(isset($_POST['btnsubmitbooking'])){
   // $message = $_POST['message'];
+
+  $to = 'ricojames.quirante@lorma.edu'; 
+  $from = 'ricojames.quirante@lorma.edu'; 
+  $fromName = 'VIDA INTERNATIONAL'; 
+   
+  $subject = "TEST EMAIL FUNCTION"; 
+   
+  $message = "TEST EMAIL FUNCTION MESSAGE"; 
+   
+  // Additional headers 
+  $headers = 'From: '.$fromName.'<'.$from.'>'; 
+   
+  // Send email 
+  if(mail($to, $subject, $message, $headers)){ 
+     echo 'Email has sent successfully.'; 
+  }else{ 
+     echo 'Email sending failed.'; 
+  }
  
 
 if(!isset($_SESSION['GUESTID'])){
